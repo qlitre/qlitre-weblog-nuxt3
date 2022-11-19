@@ -1,0 +1,239 @@
+:root {
+    --qlitre-colors-transparent: transparent;
+    --qlitre-colors-current: currentColor;
+    --qlitre-colors-black: #000000;
+    --qlitre-colors-hljs-black: #1D1F21;
+    --qlitre-colors-white: #FFFFFF;
+    --qlitre-colors-bgmain: #edede8;
+    --qlitre-colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+    --qlitre-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+    --qlitre-colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+    --qlitre-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+    --qlitre-colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+    --qlitre-colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+    --qlitre-colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+    --qlitre-colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+    --qlitre-colors-whiteAlpha-800: rgba(255, 255, 255, 0.80);
+    --qlitre-colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+    --qlitre-colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+    --qlitre-colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+    --qlitre-colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+    --qlitre-colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+    --qlitre-colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+    --qlitre-colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+    --qlitre-colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+    --qlitre-colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+    --qlitre-colors-blackAlpha-800: rgba(0, 0, 0, 0.80);
+    --qlitre-colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
+    --qlitre-colors-gray-50: #F7FAFC;
+    --qlitre-colors-gray-100: #EDF2F7;
+    --qlitre-colors-gray-200: #E2E8F0;
+    --qlitre-colors-gray-300: #CBD5E0;
+    --qlitre-colors-gray-400: #A0AEC0;
+    --qlitre-colors-gray-500: #718096;
+    --qlitre-colors-gray-600: #4A5568;
+    --qlitre-colors-gray-700: #2D3748;
+    --qlitre-colors-gray-800: #1A202C;
+    --qlitre-colors-gray-900: #171923;
+    --qlitre-colors-red-50: #FFF5F5;
+    --qlitre-colors-red-100: #FED7D7;
+    --qlitre-colors-red-200: #FEB2B2;
+    --qlitre-colors-red-300: #FC8181;
+    --qlitre-colors-red-400: #F56565;
+    --qlitre-colors-red-500: #E53E3E;
+    --qlitre-colors-red-600: #C53030;
+    --qlitre-colors-red-700: #9B2C2C;
+    --qlitre-colors-red-800: #822727;
+    --qlitre-colors-red-900: #63171B;
+    --qlitre-colors-orange-50: #FFFAF0;
+    --qlitre-colors-orange-100: #FEEBC8;
+    --qlitre-colors-orange-200: #FBD38D;
+    --qlitre-colors-orange-300: #F6AD55;
+    --qlitre-colors-orange-400: #ED8936;
+    --qlitre-colors-orange-500: #DD6B20;
+    --qlitre-colors-orange-600: #C05621;
+    --qlitre-colors-orange-700: #9C4221;
+    --qlitre-colors-orange-800: #7B341E;
+    --qlitre-colors-orange-900: #652B19;
+    --qlitre-colors-yellow-50: #FFFFF0;
+    --qlitre-colors-yellow-100: #FEFCBF;
+    --qlitre-colors-yellow-200: #FAF089;
+    --qlitre-colors-yellow-300: #F6E05E;
+    --qlitre-colors-yellow-400: #ECC94B;
+    --qlitre-colors-yellow-500: #D69E2E;
+    --qlitre-colors-yellow-600: #B7791F;
+    --qlitre-colors-yellow-700: #975A16;
+    --qlitre-colors-yellow-800: #744210;
+    --qlitre-colors-yellow-900: #5F370E;
+    --qlitre-colors-green-50: #F0FFF4;
+    --qlitre-colors-green-100: #C6F6D5;
+    --qlitre-colors-green-200: #9AE6B4;
+    --qlitre-colors-green-300: #68D391;
+    --qlitre-colors-green-400: #48BB78;
+    --qlitre-colors-green-500: #38A169;
+    --qlitre-colors-green-600: #2F855A;
+    --qlitre-colors-green-700: #276749;
+    --qlitre-colors-green-800: #22543D;
+    --qlitre-colors-green-900: #1C4532;
+    --qlitre-colors-teal-50: #E6FFFA;
+    --qlitre-colors-teal-100: #B2F5EA;
+    --qlitre-colors-teal-200: #81E6D9;
+    --qlitre-colors-teal-300: #4FD1C5;
+    --qlitre-colors-teal-400: #38B2AC;
+    --qlitre-colors-teal-500: #319795;
+    --qlitre-colors-teal-600: #2C7A7B;
+    --qlitre-colors-teal-700: #285E61;
+    --qlitre-colors-teal-800: #234E52;
+    --qlitre-colors-teal-900: #1D4044;
+    --qlitre-colors-blue-50: #ebf8ff;
+    --qlitre-colors-blue-100: #bee3f8;
+    --qlitre-colors-blue-200: #90cdf4;
+    --qlitre-colors-blue-300: #63b3ed;
+    --qlitre-colors-blue-400: #4299e1;
+    --qlitre-colors-blue-500: #3182ce;
+    --qlitre-colors-blue-600: #2b6cb0;
+    --qlitre-colors-blue-700: #2c5282;
+    --qlitre-colors-blue-800: #2a4365;
+    --qlitre-colors-blue-900: #1A365D;
+    --qlitre-colors-cyan-50: #EDFDFD;
+    --qlitre-colors-cyan-100: #C4F1F9;
+    --qlitre-colors-cyan-200: #9DECF9;
+    --qlitre-colors-cyan-300: #76E4F7;
+    --qlitre-colors-cyan-400: #0BC5EA;
+    --qlitre-colors-cyan-500: #00B5D8;
+    --qlitre-colors-cyan-600: #00A3C4;
+    --qlitre-colors-cyan-700: #0987A0;
+    --qlitre-colors-cyan-800: #086F83;
+    --qlitre-colors-cyan-900: #065666;
+    --qlitre-colors-purple-50: #FAF5FF;
+    --qlitre-colors-purple-100: #E9D8FD;
+    --qlitre-colors-purple-200: #D6BCFA;
+    --qlitre-colors-purple-300: #B794F4;
+    --qlitre-colors-purple-400: #9F7AEA;
+    --qlitre-colors-purple-500: #805AD5;
+    --qlitre-colors-purple-600: #6B46C1;
+    --qlitre-colors-purple-700: #553C9A;
+    --qlitre-colors-purple-800: #44337A;
+    --qlitre-colors-purple-900: #322659;
+    --qlitre-colors-pink-50: #FFF5F7;
+    --qlitre-colors-pink-100: #FED7E2;
+    --qlitre-colors-pink-200: #FBB6CE;
+    --qlitre-colors-pink-300: #F687B3;
+    --qlitre-colors-pink-400: #ED64A6;
+    --qlitre-colors-pink-500: #D53F8C;
+    --qlitre-colors-pink-600: #B83280;
+    --qlitre-colors-pink-700: #97266D;
+    --qlitre-colors-pink-800: #702459;
+    --qlitre-colors-pink-900: #521B41;
+    --qlitre-colors-linkedin-50: #E8F4F9;
+    --qlitre-colors-linkedin-100: #CFEDFB;
+    --qlitre-colors-linkedin-200: #9BDAF3;
+    --qlitre-colors-linkedin-300: #68C7EC;
+    --qlitre-colors-linkedin-400: #34B3E4;
+    --qlitre-colors-linkedin-500: #00A0DC;
+    --qlitre-colors-linkedin-600: #008CC9;
+    --qlitre-colors-linkedin-700: #0077B5;
+    --qlitre-colors-linkedin-800: #005E93;
+    --qlitre-colors-linkedin-900: #004471;
+    --qlitre-colors-facebook-50: #E8F4F9;
+    --qlitre-colors-facebook-100: #D9DEE9;
+    --qlitre-colors-facebook-200: #B7C2DA;
+    --qlitre-colors-facebook-300: #6482C0;
+    --qlitre-colors-facebook-400: #4267B2;
+    --qlitre-colors-facebook-500: #385898;
+    --qlitre-colors-facebook-600: #314E89;
+    --qlitre-colors-facebook-700: #29487D;
+    --qlitre-colors-facebook-800: #223B67;
+    --qlitre-colors-facebook-900: #1E355B;
+    --qlitre-colors-messenger-50: #D0E6FF;
+    --qlitre-colors-messenger-100: #B9DAFF;
+    --qlitre-colors-messenger-200: #A2CDFF;
+    --qlitre-colors-messenger-300: #7AB8FF;
+    --qlitre-colors-messenger-400: #2E90FF;
+    --qlitre-colors-messenger-500: #0078FF;
+    --qlitre-colors-messenger-600: #0063D1;
+    --qlitre-colors-messenger-700: #0052AC;
+    --qlitre-colors-messenger-800: #003C7E;
+    --qlitre-colors-messenger-900: #002C5C;
+    --qlitre-colors-whatsapp-50: #dffeec;
+    --qlitre-colors-whatsapp-100: #b9f5d0;
+    --qlitre-colors-whatsapp-200: #90edb3;
+    --qlitre-colors-whatsapp-300: #65e495;
+    --qlitre-colors-whatsapp-400: #3cdd78;
+    --qlitre-colors-whatsapp-500: #22c35e;
+    --qlitre-colors-whatsapp-600: #179848;
+    --qlitre-colors-whatsapp-700: #0c6c33;
+    --qlitre-colors-whatsapp-800: #01421c;
+    --qlitre-colors-whatsapp-900: #001803;
+    --qlitre-colors-twitter-50: #E5F4FD;
+    --qlitre-colors-twitter-100: #C8E9FB;
+    --qlitre-colors-twitter-200: #A8DCFA;
+    --qlitre-colors-twitter-300: #83CDF7;
+    --qlitre-colors-twitter-400: #57BBF5;
+    --qlitre-colors-twitter-500: #1DA1F2;
+    --qlitre-colors-twitter-600: #1A94DA;
+    --qlitre-colors-twitter-700: #1681BF;
+    --qlitre-colors-twitter-800: #136B9E;
+    --qlitre-colors-twitter-900: #0D4D71;
+    --qlitre-colors-telegram-50: #E3F2F9;
+    --qlitre-colors-telegram-100: #C5E4F3;
+    --qlitre-colors-telegram-200: #A2D4EC;
+    --qlitre-colors-telegram-300: #7AC1E4;
+    --qlitre-colors-telegram-400: #47A9DA;
+    --qlitre-colors-telegram-500: #0088CC;
+    --qlitre-colors-telegram-600: #007AB8;
+    --qlitre-colors-telegram-700: #006BA1;
+    --qlitre-colors-telegram-800: #005885;
+    --qlitre-colors-telegram-900: #003F5E;
+    --qlitre-fonts-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --qlitre-fonts-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --qlitre-fonts-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--qlitre-colors-black);
+    font-family: var(--qlitre-fonts-body);
+    background-color: var(--qlitre-colors-white);
+    -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--qlitre-fonts-heading);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #d03c56;
+    text-decoration: none;
+}
+
+/* Transition */
+.page-enter-from {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.3s;
+}
+
+.page-enter,
+.page-leave-to {
+    opacity: 0;
+}

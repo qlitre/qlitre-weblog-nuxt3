@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "@nuxtjs/google-adsense": "^2.1.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dayjs": "^1.11.6",
+    "highlight.js": "^11.6.0",
+    "microcms-js-sdk": "^2.3.1",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0"
+  }
+}
