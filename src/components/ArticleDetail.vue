@@ -3,6 +3,7 @@ import * as cheerio from 'cheerio';
 import hljs from 'highlight.js'
 import 'highlight.js/styles/hybrid.css'
 import { Post } from '../types/blog'
+import AmazonLinkCard from './AmazonLinkCard.vue';
 
 type Props = {
     slug: string;
@@ -35,6 +36,44 @@ const toc = headings.map(item => ({
     name: item.name,
 }));
 
+useHead({
+    title: article.value.title,
+    link: [{
+        rel: "canonical",
+        href: `https://qlitre-weblog.com/${article.value.id}`
+    }],
+    meta: [
+        { name: 'description', content: article.value.description },
+        { name: 'keyword', content: article.value.keywords },
+        { property: 'og:url', content: `https://qlitre-weblog.com/${article.value.id}/` },
+        {
+            property: 'og:type',
+            content: 'article'
+        },
+        {
+            property: 'og:title',
+            content: `${article.value.title} | Qlitre`
+        },
+        {
+            property: 'og:description',
+            content: article.value.description
+        },
+        {
+            property: 'og:site_name',
+            content: "Qlitre's Blog"
+        },
+        {
+            name: 'twitter:card',
+            content: 'summary_large_image'
+        },
+        {
+            name: 'twitter:site',
+            content: '@kuri_tter'
+        }
+    ],
+})
+
+
 </script>
         
 <template>
@@ -49,6 +88,9 @@ const toc = headings.map(item => ({
         <div class="post-wrapper">
             <div class="posts">
                 <MarkdownBody :body="body" />
+                <div v-if="article.useAmazonLink">
+                    <AmazonLinkCard v-for="(amazonLink, i) in article.repeated" :key="i" :amazonLink="amazonLink" />
+                </div>
             </div>
             <div class="aside">
                 <Toc :toc="toc" />

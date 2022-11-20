@@ -9,6 +9,12 @@ export type Tag = {
 
 export type TagList = MicroCMSListResponse<Tag>
 
+export type AmazonLink = {
+    title: string;
+    image: MicroCMSImage;
+    url: string;
+}
+
 export type Post = {
     title: string;
     description: string;
@@ -17,7 +23,10 @@ export type Post = {
     tag: Tag[];
     tocVisible: boolean;
     text: string;
-    related: Post[]
+    related: Post[];
+    useAmazonLink: boolean;
+    repeated: AmazonLink[];
+
 } & MicroCMSListContent;
 
 export type PostList = MicroCMSListResponse<Post>

@@ -8,6 +8,11 @@
             </nuxt-link>
             <nav class="main-nav">
                 <li class="nav-item">
+                    <a href="https://github.com/qlitre/qlitre-weblog-nuxt3" target="_blank"
+                        rel="noopener noreferrer">GitHub</a>
+                </li>
+
+                <li class="nav-item">
                     <nuxt-link :to='`/about`'>
                         ABOUT
                     </nuxt-link>
