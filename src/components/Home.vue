@@ -11,7 +11,12 @@ type Props = {
 const { page, tagId } = defineProps<Props>()
 
 const limit = BLOG_PER_PAGE
-const queries: MicroCMSQueries = { limit: limit, offset: (page - 1) * limit }
+const queries: MicroCMSQueries = {
+    limit: limit,
+    offset: (page - 1) * limit,
+    fields:'id,title,description,tag,publishedAt'
+
+}
 if (tagId) {
     queries.filters = `tag[contains]${tagId}`
 }
