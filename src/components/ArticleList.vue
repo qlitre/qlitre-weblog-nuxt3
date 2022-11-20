@@ -16,7 +16,7 @@ const { posts } = defineProps<Props>()
                     {{ post.title }}
                 </h1>
             </NuxtLink>
-            <p class="published">公開日：{{ $formatDate(post.publishedAt)}}</p>
+            <p class="published">公開日：{{ $formatDate(post.publishedAt) }}</p>
             <p class="description">{{ post.description }}</p>
             <TagLabel v-for="tag in post.tag" :key="tag.id" :tag="tag" :colorClass="`active`" class="tag"></TagLabel>
         </article>
@@ -63,4 +63,18 @@ const { posts } = defineProps<Props>()
 .tag {
     margin-top: 2rem;
 }
+
+@media (max-width: 720px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .published {
+        font-size: 1.4rem;
+    }
+    .description{
+        font-size: 1.4rem;
+    }
+}
+
 </style>

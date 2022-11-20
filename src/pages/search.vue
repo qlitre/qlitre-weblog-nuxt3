@@ -28,8 +28,13 @@ watch(() => route.query, () => location.reload())
 <template>
   <div class="wrapper">
     <SearchForm :keyword="query" />
-    <ArticleList :posts="posts.contents" />
-    <Pagination :numPages="numPages" :current="page" :keyword="query" />
+    <div v-if="posts.contents">
+      <ArticleList :posts="posts.contents" />
+      <Pagination :numPages="numPages" :current="page" :keyword="query" />
+    </div>
+    <div v-if="posts.contents.length == 0">
+      <h1 class="no-result">お探しの記事は見つかりませんでした。</h1>
+    </div>
   </div>
 </template>
 
@@ -40,6 +45,13 @@ watch(() => route.query, () => location.reload())
   width: 960px;
   margin: 0 auto 0;
 }
+
+.no-result {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+
 
 @media (max-width: 1024px) {
   .wrapper {

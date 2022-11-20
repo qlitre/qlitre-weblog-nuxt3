@@ -55,4 +55,11 @@ function getPath(p: number) {
 .link {
     color: #A2A2A6;
 }
+
+@media (max-width: 720px) {
+    .link,.current {
+        font-size: 2rem;
+        margin: 0 1.5rem;
+    }
+}
 </style>

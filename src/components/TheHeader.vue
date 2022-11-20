@@ -69,4 +69,14 @@
         }
     }
 }
+
+@media (max-width: 720px) {
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    a {
+        font-size: 1.4rem;
+    }
+}
 </style>

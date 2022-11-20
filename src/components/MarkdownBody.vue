@@ -79,7 +79,6 @@ const { body } = defineProps<Props>()
 
     :deep(a) {
         color: #1266f1;
-
         :hover {
             opacity: .5;
         }

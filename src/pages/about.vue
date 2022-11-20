@@ -140,7 +140,7 @@ img {
 }
 
 .skill-name {
-    margin-left: var(--qlitre-space-8);
+    margin-left: 1rem;
 }
 </style>
   
