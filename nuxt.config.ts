@@ -2,6 +2,7 @@ const { API_KEY, SERVICE_DOMAIN, GA_ADSENSE_ID } = process.env;
 
 export default defineNuxtConfig({
     srcDir: 'src/',
+    ssr: true,
     runtimeConfig: {
         apiKey: API_KEY,
         serviceDomain: SERVICE_DOMAIN

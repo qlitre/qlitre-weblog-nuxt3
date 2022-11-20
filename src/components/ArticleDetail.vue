@@ -11,9 +11,7 @@ type Props = {
 const { slug } = defineProps<Props>()
 
 const { data: article, pending, error, refresh } = await useAsyncData<Post>('article',
-    () => $fetch('/api/postDetail', { params: { slug: slug } }), {
-    initialCache: false
-})
+    () => $fetch('/api/postDetail', { params: { slug: slug } }))
 
 if (!article.value) {
     throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
