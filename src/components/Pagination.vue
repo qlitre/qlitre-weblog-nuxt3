@@ -24,7 +24,7 @@ function getPath(p: number) {
     </div>
 </template>
     
-<style scoped>
+<style scoped lang="scss">
 .pagination {
     position: relative;
     width: 100%;

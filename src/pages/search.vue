@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import { PostList } from '../types/blog';
 import { BLOG_PER_PAGE } from '../settings/siteSettings';
+import { MicroCMSQueries } from 'microcms-js-sdk'
 
 const limit = BLOG_PER_PAGE
 const route = useRoute()
 const page = Number(route.query.page || 1)
 const query = String(route.query.q)
-const params = {
+const params: MicroCMSQueries = {
   q: query,
   limit: limit,
-  offset: (page - 1) * limit
+  offset: (page - 1) * limit,
+  orders: '-publishedAt'
 }
+
 const { data: posts, pending, error, refresh } = await useAsyncData<PostList>(
-  'post-list-w-search', () => $fetch('/api/postList', { params: params }),
-  {
-    initialCache: false
-  })
+  'post-list-w-search', () => $fetch('/api/postList', { params: params }),)
 
 const numPages = Math.ceil(posts.value.totalCount / limit)
 
@@ -32,7 +32,7 @@ watch(() => route.query, () => location.reload())
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .wrapper {
   padding-top: 112px;
   position: relative;

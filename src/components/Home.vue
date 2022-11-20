@@ -16,13 +16,12 @@ if (tagId) {
     queries.filters = `tag[contains]${tagId}`
 }
 
-const { data: posts } = await useAsyncData<PostList>('post-list', () =>
+const { data: posts, pending, error, refresh } = await useAsyncData<PostList>('post-list', () =>
     $fetch(
         '/api/postList',
         { method: 'GET', params: queries }
     ),
 )
-
 
 const numPages = Math.ceil(posts.value.totalCount / limit)
 
@@ -41,7 +40,7 @@ const numPages = Math.ceil(posts.value.totalCount / limit)
                 <ArticleList :posts="posts.contents" />
             </div>
             <div class="aside">
-                <adsbygoogle adSlot="3796995428"/>
+                <adsbygoogle adSlot="3796995428" />
             </div>
         </div>
         <Pagination :numPages="numPages" :current="page" :tagId="tagId" />

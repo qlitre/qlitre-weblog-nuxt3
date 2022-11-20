@@ -7,7 +7,7 @@
 </template>
 
 
-<style scoped>
+<style scoped lang="scss">
 .center {
   margin: 30px 0;
   text-align: center;

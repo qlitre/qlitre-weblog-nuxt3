@@ -24,7 +24,7 @@ const { posts } = defineProps<Props>()
 </template>
 <style scoped lang="scss">
 .article {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
     width: 100%;
     align-items: center;
 }

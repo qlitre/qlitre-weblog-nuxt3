@@ -4,11 +4,18 @@ type Props = {
     selectedTagId?: string;
 }
 const { selectedTagId } = defineProps<Props>()
-const { data: tagList, pending, error, refresh } = await useAsyncData<TagList>(
-    'tag-list', () => $fetch('/api/tagList'),
-    {
-        initialCache: false
-    })
+const { data: tags, pending, error, refresh } = await useAsyncData<TagList>(
+    'tag-list', () => $fetch('/api/tagList')
+)
+
+const tagList = tags.value.contents
+if (selectedTagId) {
+    tagList.filter(a => a.id == selectedTagId).concat(
+        tagList.filter(b => b.id != selectedTagId)
+    )
+}
+
+
 
 function getClass(tagId: string) {
     if (tagId == selectedTagId) return 'active'
@@ -19,7 +26,7 @@ function getClass(tagId: string) {
 
 <template>
     <div class="inline">
-        <span v-for="tag in tagList.contents" :key="tag.id">
+        <span v-for="tag in tagList" :key="tag.id">
             <TagLabel :tag="tag" :isInline="true" :colorClass="getClass(tag.id)" />
         </span>
     </div>

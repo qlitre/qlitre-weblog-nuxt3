@@ -23,7 +23,7 @@ const { toc } = defineProps<Props>()
   
   
   
-<style scoped>
+<style scoped lang="scss">
 .toc {
     padding: 1rem;
     font-size: 1.3rem;
