@@ -1,18 +1,16 @@
 <script setup lang="ts">
 import 'highlight.js/styles/hybrid.css'
 import { Post } from '../types/blog'
-import AmazonLinkCard from './AmazonLinkCard.vue';
 import { getHighlightBody, getToc } from '../libs/cheerio-utils'
 
 
-type Props = {
-    slug: string;
-}
+const route = useRoute();
+const slug = String(route.query.id);
+const draftkey = String(route.query.draftkey)
 
-const { slug } = defineProps<Props>()
 
 const { data: article, pending, error, refresh } = await useAsyncData<Post>('article',
-    () => $fetch('/api/postDetail', { params: { slug: slug } }))
+    () => $fetch('/api/postDetail', { params: { slug: slug, draftKey: draftkey } }))
 
 if (!article.value) {
     throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
@@ -20,44 +18,6 @@ if (!article.value) {
 
 const body = getHighlightBody(article.value.text)
 const toc = getToc(article.value.text)
-
-useHead({
-    title: article.value.title,
-    link: [{
-        rel: "canonical",
-        href: `https://qlitre-weblog.com/${article.value.id}`
-    }],
-    meta: [
-        { name: 'description', content: article.value.description },
-        { name: 'keyword', content: article.value.keywords },
-        { property: 'og:url', content: `https://qlitre-weblog.com/${article.value.id}/` },
-        {
-            property: 'og:type',
-            content: 'article'
-        },
-        {
-            property: 'og:title',
-            content: `${article.value.title} | Qlitre`
-        },
-        {
-            property: 'og:description',
-            content: article.value.description
-        },
-        {
-            property: 'og:site_name',
-            content: "Qlitre's Blog"
-        },
-        {
-            name: 'twitter:card',
-            content: 'summary_large_image'
-        },
-        {
-            name: 'twitter:site',
-            content: '@kuri_tter'
-        }
-    ],
-})
-
 
 </script>
         
@@ -68,7 +28,7 @@ useHead({
             <h1 class="title">
                 {{ article.title }}
             </h1>
-            <p class="published">公開日：{{ $formatDate(article.publishedAt) }}</p>
+            <p class="published">公開日：yyyy-mm-dd</p>
             <Share :id="article.id" :title="article.title" />
         </div>
         <div class="post-wrapper">
@@ -95,7 +55,7 @@ useHead({
 }
 
 .post-wrapper {
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .article-header {
