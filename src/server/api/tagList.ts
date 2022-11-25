@@ -1,7 +1,5 @@
-import type { IncomingMessage, ServerResponse } from 'http'
 import client from './client'
 import { Tag } from '../../types/blog'
-import * as url from "url";
 
 
 export default defineEventHandler(async (event) => {
@@ -12,6 +10,6 @@ export default defineEventHandler(async (event) => {
     const data = await client.getList<Tag>({
         endpoint: 'tag',
         queries: queries
-    })
+    }).catch((err) => console.error(err));
     return data
 })

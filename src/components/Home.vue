@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { BLOG_PER_PAGE } from '../settings/siteSettings'
-import { PostList } from '../types/blog';
 import { MicroCMSQueries } from 'microcms-js-sdk'
 
 type Props = {
@@ -13,17 +12,16 @@ const { page, tagId } = defineProps<Props>()
 const limit = BLOG_PER_PAGE
 const queries: MicroCMSQueries = {
     limit: limit,
+    orders: '-revisedAt',
     offset: (page - 1) * limit,
-    fields:'id,title,description,tag,publishedAt'
-
+    fields: 'id,title,description,tag,publishedAt,revisedAt'
 }
 if (tagId) {
     queries.filters = `tag[contains]${tagId}`
 }
 
-const { data: posts, pending, error, refresh } = await useAsyncData<PostList>('post-list', () =>
-    $fetch(
-        '/api/postList',
+const { data: posts, pending, error, refresh } = await useAsyncData('post-list', () =>
+    $fetch('/api/postList',
         { method: 'GET', params: queries }
     ),
 )

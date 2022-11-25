@@ -12,7 +12,7 @@ const params: MicroCMSQueries = {
   limit: limit,
   offset: (page - 1) * limit,
   orders: '-publishedAt',
-  fields: 'id,title,description,tag,publishedAt'
+  fields: 'id,title,description,tag,publishedAt,revisedAt'
 }
 
 const { data: posts, pending, error, refresh } = await useAsyncData<PostList>(

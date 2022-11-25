@@ -16,7 +16,15 @@ const { posts } = defineProps<Props>()
                     {{ post.title }}
                 </h1>
             </NuxtLink>
-            <p class="published">公開日：{{ $formatDate(post.publishedAt) }}</p>
+            <p class="date">
+                <span class="revised">
+                    更新日：{{ $formatDate(post.revisedAt) }}
+                </span>
+                <span class="published">
+                    公開日：{{ $formatDate(post.publishedAt) }}
+                </span>
+
+            </p>
             <p class="description">{{ post.description }}</p>
             <TagLabel v-for="tag in post.tag" :key="tag.id" :tag="tag" :colorClass="`active`" class="tag"></TagLabel>
         </article>
@@ -29,10 +37,14 @@ const { posts } = defineProps<Props>()
     align-items: center;
 }
 
-.published {
+.date {
     margin-top: 1rem;
     font-size: 1.6rem;
     color: var(--qlitre-colors-gray-700);
+}
+
+.published {
+    margin-left: 2rem;
 }
 
 .title {
@@ -72,9 +84,9 @@ const { posts } = defineProps<Props>()
     .published {
         font-size: 1.4rem;
     }
-    .description{
+
+    .description {
         font-size: 1.4rem;
     }
 }
-
 </style>
