@@ -23,7 +23,6 @@ const { posts } = defineProps<Props>()
                 <span class="published">
                     公開日：{{ $formatDate(post.publishedAt) }}
                 </span>
-
             </p>
             <p class="description">{{ post.description }}</p>
             <TagLabel v-for="tag in post.tag" :key="tag.id" :tag="tag" :colorClass="`active`" class="tag"></TagLabel>

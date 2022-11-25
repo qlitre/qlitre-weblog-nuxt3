@@ -68,7 +68,14 @@ useHead({
             <h1 class="title">
                 {{ article.title }}
             </h1>
-            <p class="published">公開日：{{ $formatDate(article.publishedAt) }}</p>
+            <p class="date">
+                <span class="revised">
+                    更新日：{{ $formatDate(article.revisedAt) }}
+                </span>
+                <span class="published">
+                    公開日：{{ $formatDate(article.publishedAt) }}
+                </span>
+            </p>
             <Share :id="article.id" :title="article.title" />
         </div>
         <div class="post-wrapper">
@@ -131,10 +138,14 @@ useHead({
 }
 
 
-.published {
+.date {
     margin-top: 1rem;
     font-size: 1.6rem;
     color: var(--qlitre-colors-gray-700);
+}
+
+.published {
+    margin-left: 2rem;
 }
 
 .title {
