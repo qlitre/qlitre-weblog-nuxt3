@@ -43,7 +43,7 @@ const hatenaLink = `https://b.hatena.ne.jp/entry/https://qlitre-weblog.com/${id}
 
 <style scoped>
 .share {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 img {
@@ -60,7 +60,7 @@ img {
 .shareList {
   text-align: center;
   display: inline-block;
-  margin-right: 2rem;
+  margin-right: 3rem;
   vertical-align: middle;
 }
 

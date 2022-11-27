@@ -21,42 +21,7 @@ if (!article.value) {
 const body = getHighlightBody(article.value.text)
 const toc = getToc(article.value.text)
 
-useHead({
-    title: article.value.title,
-    link: [{
-        rel: "canonical",
-        href: `https://qlitre-weblog.com/${article.value.id}`
-    }],
-    meta: [
-        { name: 'description', content: article.value.description },
-        { name: 'keyword', content: article.value.keywords },
-        { property: 'og:url', content: `https://qlitre-weblog.com/${article.value.id}/` },
-        {
-            property: 'og:type',
-            content: 'article'
-        },
-        {
-            property: 'og:title',
-            content: `${article.value.title} | Qlitre`
-        },
-        {
-            property: 'og:description',
-            content: article.value.description
-        },
-        {
-            property: 'og:site_name',
-            content: "Qlitre's Blog"
-        },
-        {
-            name: 'twitter:card',
-            content: 'summary_large_image'
-        },
-        {
-            name: 'twitter:site',
-            content: '@kuri_tter'
-        }
-    ],
-})
+useDetailHead(article.value)
 
 
 </script>

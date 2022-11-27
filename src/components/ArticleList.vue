@@ -25,7 +25,7 @@ const { posts } = defineProps<Props>()
                 </span>
             </p>
             <p class="description">{{ post.description }}</p>
-            <TagLabel v-for="tag in post.tag" :key="tag.id" :tag="tag" :colorClass="`active`" class="tag"></TagLabel>
+            <TagLabel v-for="tag in post.tag" :key="tag.id" :tag="tag" :colorClass="`nonActive`" class="tag"></TagLabel>
         </article>
     </div>
 </template>

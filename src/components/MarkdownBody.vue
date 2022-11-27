@@ -44,17 +44,22 @@ const { body } = defineProps<Props>()
 
     :deep(pre) {
         margin-top: 1rem;
-        line-height: 1.5;
         background-color: #1D1F21;
         padding: 2% 4%;
         overflow-x: scroll;
-        font-weight: lighter;
+    }
+
+    :deep(pre) * {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        font-weight: normal;
     }
 
     :deep(blockquote) {
         padding: 15px;
-        border-left: 5px solid #ccc;
+        border-left: 3px solid var(--qlitre-colors-gray-300);
         border-radius: 2px;
+        color: var(--qlitre-colors-gray-500);
     }
 
     :deep(h1) {
@@ -79,6 +84,7 @@ const { body } = defineProps<Props>()
 
     :deep(a) {
         color: #1266f1;
+
         :hover {
             opacity: .5;
         }

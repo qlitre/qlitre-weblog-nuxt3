@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TagList } from '../types/blog'
+import { Tag } from '../types/blog'
 type Props = {
     selectedTagId?: string;
 }
@@ -9,13 +9,18 @@ const { data: tags, pending, error, refresh } = await useAsyncData<TagList>(
 )
 
 const tagList = tags.value.contents
+// 選択中のタグがある場合先頭にもってくる
 if (selectedTagId) {
-    tagList.filter(a => a.id == selectedTagId).concat(
-        tagList.filter(b => b.id != selectedTagId)
-    )
+    tagList.sort(function (first: Tag, second: Tag) {
+        if (first.id == selectedTagId) {
+            return -1;
+        } else if (second.id == selectedTagId) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
 }
-
-
 
 function getClass(tagId: string) {
     if (tagId == selectedTagId) return 'active'

@@ -28,16 +28,7 @@ const { data: posts, pending, error, refresh } = await useAsyncData('post-list',
 
 const numPages = Math.ceil(posts.value.totalCount / limit)
 
-useHead({
-    title: "Qlitre's Blog",
-    link: [{
-        rel: "canonical",
-        href: `https://qlitre-weblog.com`
-    }],
-    meta: [
-        { name: 'description', content: "Pythonを中心にプログラミングの備忘録、チュートリアルを書いています" }
-    ],
-})
+useIndexHead()
 
 </script>
             
