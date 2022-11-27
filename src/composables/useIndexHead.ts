@@ -1,12 +1,14 @@
+import { config } from "../settings/siteSettings"
+
 export const useIndexHead = () => {
     return useHead({
-        title: "Qlitre's Blog",
+        title: config.siteName,
         link: [{
             rel: "canonical",
-            href: `https://qlitre-weblog.com`
+            href: config.siteUrl
         }],
         meta: [
-            { name: 'description', content: "Pythonを中心にプログラミングの備忘録、チュートリアルを書いています" }
+            { name: 'description', content: config.siteDescription }
         ],
     })
 }

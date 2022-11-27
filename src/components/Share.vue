@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import { config } from '../settings/siteSettings'
+
 type Props = {
   id: string;
   title: string;
 }
 const { id, title } = defineProps<Props>()
 
-const twitterLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=https://qlitre-weblog.com/${id}/&hashtags=qlitreweblog`;
-const facebookLink = `https://www.facebook.com/sharer.php?u=https://qlitre-weblog.com/${id}/`;
-const hatenaLink = `https://b.hatena.ne.jp/entry/https://qlitre-weblog.com/${id}/`;
+const twitterLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${config.siteUrl}/${id}/&hashtags=qlitreweblog`;
+const facebookLink = `https://www.facebook.com/sharer.php?u=${config.siteUrl}/${id}/`;
+const hatenaLink = `https://b.hatena.ne.jp/entry/https://${config.siteUrl}/${id}/`;
 
 </script>
 
@@ -30,7 +32,7 @@ const hatenaLink = `https://b.hatena.ne.jp/entry/https://qlitre-weblog.com/${id}
         </a>
       </li>
       <li class="shareList">
-        <a href="https://www.buymeacoffee.com/qlitre" target="_blank" rel="noopener noreferrer">
+        <a :href="config.social.buyMeACoffee" target="_blank" rel="noopener noreferrer">
           <img height="40" alt="Buy Me A Coffee" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
             class="img-buymeacoffee">
         </a>

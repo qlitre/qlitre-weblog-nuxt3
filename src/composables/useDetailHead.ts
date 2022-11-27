@@ -1,16 +1,17 @@
 import { Post } from "../types/blog"
+import { config } from "../settings/siteSettings"
 
 export const useDetailHead = (post: Post) => {
     return useHead({
         title: post.title,
         link: [{
             rel: "canonical",
-            href: `https://qlitre-weblog.com/${post.id}`
+            href: `${config.siteUrl}/${post.id}`
         }],
         meta: [
             { name: 'description', content: post.description },
             { name: 'keyword', content: post.keywords },
-            { property: 'og:url', content: `https://qlitre-weblog.com/${post.id}/` },
+            { property: 'og:url', content: `${config.siteUrl}/${post.id}/` },
             {
                 property: 'og:type',
                 content: 'article'
@@ -25,7 +26,7 @@ export const useDetailHead = (post: Post) => {
             },
             {
                 property: 'og:site_name',
-                content: "Qlitre's Blog"
+                content: config.siteName
             },
             {
                 name: 'twitter:card',
@@ -33,7 +34,7 @@ export const useDetailHead = (post: Post) => {
             },
             {
                 name: 'twitter:site',
-                content: '@kuri_tter'
+                content: config.social.twitter
             }
         ],
     })

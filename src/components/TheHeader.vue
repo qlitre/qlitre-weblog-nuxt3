@@ -1,17 +1,21 @@
+<script setup lang="ts">
+import { config } from '../settings/siteSettings'
+</script>
+
 <template>
     <header class="header">
         <div class="container">
             <nuxt-link :to='`/`'>
                 <h1 class="site-title">
-                    Qlitre's Blog
+                    {{ config.siteName }}
                 </h1>
             </nuxt-link>
             <nav class="main-nav">
                 <li class="nav-item">
-                    <a href="https://github.com/qlitre/qlitre-weblog-nuxt3" target="_blank"
-                        rel="noopener noreferrer">GitHub</a>
+                    <a :href="config.social.repos" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
                 </li>
-
                 <li class="nav-item">
                     <nuxt-link :to='`/about`'>
                         ABOUT

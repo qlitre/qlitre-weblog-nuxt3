@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { config } from '../settings/siteSettings';
+
 const skillSet = [
     { name: "VBA", since: "2019年06月" },
     { name: "Python", since: "2020年01月" },
@@ -39,14 +41,15 @@ const skillSet = [
                 お問い合わせ先
             </h2>
             <p>
-                <a href="https://twitter.com/kuri_tter" target="_blank" rel="noopener noreferrer">@kuri_tter</a>
+                <a :href="config.social.twitterProf" target="_blank" rel="noopener noreferrer">
+                    {{ config.social.twitter }}
+                </a>
             </p>
             <h2>
                 Github
             </h2>
             <p>
-                <a href="https://github.com/qlitre" target="_blank"
-                    rel="noopener noreferrer">https://github.com/qlitre</a>
+                <a :href="config.social.github" target="_blank" rel="noopener noreferrer">{{ config.social.github }}</a>
             </p>
             <h2>
                 できること
