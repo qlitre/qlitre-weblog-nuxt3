@@ -13,6 +13,14 @@ export type AmazonLink = {
     url: string;
 }
 
+export type RichEditor = {
+    body: string;
+}
+
+export type Body = {
+    fieldId: 'richEditor' | 'amazonLink'
+} & RichEditor & AmazonLink;
+
 export type Post = {
     title: string;
     description: string;
@@ -22,8 +30,7 @@ export type Post = {
     tocVisible: boolean;
     text: string;
     related: Post[];
-    useAmazonLink: boolean;
-    repeated: AmazonLink[];
-
+    useRepeatBody: boolean;
+    repeated: Body[];
 } & MicroCMSListContent;
 

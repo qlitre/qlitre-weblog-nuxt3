@@ -57,7 +57,9 @@ function getPath(p: number) {
 }
 
 @media (max-width: 720px) {
-    .link,.current {
+
+    .link,
+    .current {
         font-size: 2rem;
         margin: 0 1.5rem;
     }

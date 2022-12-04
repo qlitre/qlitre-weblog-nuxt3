@@ -7,7 +7,7 @@ type Props = {
 }
 const { id, title } = defineProps<Props>()
 
-const twitterLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${config.siteUrl}/${id}/&hashtags=qlitreweblog`;
+const twitterLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${config.siteUrl}/${id}/&hashtags=qlitreweblog&via=kuri_tter`;
 const facebookLink = `https://www.facebook.com/sharer.php?u=${config.siteUrl}/${id}/`;
 const hatenaLink = `https://b.hatena.ne.jp/entry/https://${config.siteUrl}/${id}/`;
 

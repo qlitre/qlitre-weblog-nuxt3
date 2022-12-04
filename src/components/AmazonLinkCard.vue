@@ -11,9 +11,9 @@ const { amazonLink } = defineProps<Props>()
 <template>
     <div class="link-box">
         <div class="left">
-            <p class="title">
+            <a class="title" :href="amazonLink.url" target="_blank">
                 {{ amazonLink.title }}
-            </p>
+            </a>
             <a class="link" :href="amazonLink.url" target="_blank">
                 Amazon で購入する
             </a>
@@ -31,9 +31,9 @@ const { amazonLink } = defineProps<Props>()
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border: 2px solid;
+    border: 1px solid;
     border-color: var(--qlitre-colors-teal-400);
-    border-radius: 1px;
+    border-radius: 10px;
     margin: 3rem 0;
 }
 
@@ -43,17 +43,28 @@ const { amazonLink } = defineProps<Props>()
 
 .title {
     font-size: 1.6rem;
-    color: var(--qlitre-colors-gray-500);
     line-height: 1.8;
     font-weight: bold;
     margin-bottom: 2rem;
+    color: var(--qlitre-colors-gray-500);
+    display: block;
+
+    &:hover {
+        opacity: .5;
+    }
 }
 
 .link {
     color: var(--qlitre-colors-teal-400);
     font-size: 1.6rem;
     font-weight: 500;
+
+    &:hover {
+        opacity: .5;
+    }
 }
+
+
 
 .img {
     max-height: 150px;

@@ -1,13 +1,21 @@
 <script setup lang="ts">
+
+import 'highlight.js/styles/hybrid.css'
+import { getHighlightBody } from '../libs/cheerio-utils'
+
 type Props = {
     body: string;
 }
 
+
+
 const { body } = defineProps<Props>()
+
+const highlightBody = getHighlightBody(body)
 
 </script>
 <template>
-    <div class="md" v-html="body"></div>
+    <div class="md" v-html="highlightBody"></div>
 </template>
     
 <style scoped lang="scss">
@@ -57,7 +65,7 @@ const { body } = defineProps<Props>()
 
     :deep(blockquote) {
         padding: 15px;
-        border-left: 3px solid var(--qlitre-colors-gray-300);
+        border-left: 2px solid var(--qlitre-colors-gray-300);
         border-radius: 2px;
         color: var(--qlitre-colors-gray-500);
     }

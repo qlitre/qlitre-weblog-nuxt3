@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import 'highlight.js/styles/hybrid.css'
-import { Post } from '../types/blog'
-import AmazonLinkCard from './AmazonLinkCard.vue';
-import { getHighlightBody, getToc } from '../libs/cheerio-utils'
-
+import { Post } from '../types/blog';
+import { getToc } from '../libs/cheerio-utils';
 
 type Props = {
     slug: string;
@@ -18,11 +15,21 @@ if (!article.value) {
     throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
 }
 
-const body = getHighlightBody(article.value.text)
-const toc = getToc(article.value.text)
+let body = ''
+if (article.value.useRepeatBody) {
+    const arr = article.value.repeated
+    arr.forEach((elm, index) => {
+        if (elm.fieldId == 'richEditor') {
+            body += elm.body
+        }
+    });
+} else {
+    body = article.value.text
+}
+
+const toc = getToc(body)
 
 useDetailHead(article.value)
-
 
 </script>
         
@@ -45,9 +52,11 @@ useDetailHead(article.value)
         </div>
         <div class="post-wrapper">
             <div class="posts">
-                <MarkdownBody :body="body" />
-                <div v-if="article.useAmazonLink">
-                    <AmazonLinkCard v-for="(amazonLink, i) in article.repeated" :key="i" :amazonLink="amazonLink" />
+                <div v-if="article.useRepeatBody">
+                    <RepeatedBody :repeatedBody="article.repeated" />
+                </div>
+                <div v-if="!article.useRepeatBody">
+                    <MarkdownBody :body="article.text" />
                 </div>
             </div>
             <div class="aside">
