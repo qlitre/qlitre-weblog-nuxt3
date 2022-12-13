@@ -64,4 +64,10 @@ function getPath(p: number) {
         margin: 0 1.5rem;
     }
 }
+
+.dark-mode {
+    .pagination:deep(.current) {
+        color: var(--qlitre-colors-white);
+    }
+}
 </style>

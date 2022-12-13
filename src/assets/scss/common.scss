@@ -237,3 +237,10 @@ a:active {
 .page-leave-to {
     opacity: 0;
 }
+
+
+.dark-mode {
+    body {
+        background-color: var(--qlitre-colors-gray-800);
+    }
+}

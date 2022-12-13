@@ -62,5 +62,11 @@ function getClass(tagId: string) {
     border-radius: 5px;
     box-shadow: none;
 }
+
+.dark-mode {
+    .inline::-webkit-scrollbar-thumb {
+        background: var(--qlitre-colors-gray-500);
+    }
+}
 </style>
     

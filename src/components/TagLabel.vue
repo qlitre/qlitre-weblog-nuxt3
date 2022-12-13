@@ -46,4 +46,14 @@ function getPath(tagId: string) {
     color: var(--qlitre-colors-gray-700);
     background-color: var(--qlitre-colors-white);
 }
+
+.dark-mode {
+    .nonActive {
+        background-color: var(--qlitre-colors-gray-300);
+    }
+
+    .active {
+        background-color: var(--qlitre-colors-teal-700);
+    }
+}
 </style>

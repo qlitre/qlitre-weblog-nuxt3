@@ -129,4 +129,14 @@ useDetailHead(article.value)
     line-height: 1.8;
     font-weight: bold;
 }
+
+.dark-mode {
+
+    .title,
+    .revised,
+    .published,
+    .description {
+        color: var(--qlitre-colors-whiteAlpha-700);
+    }
+}
 </style>

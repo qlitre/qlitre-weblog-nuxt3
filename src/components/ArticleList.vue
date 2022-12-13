@@ -88,4 +88,16 @@ const { posts } = defineProps<Props>()
         font-size: 1.4rem;
     }
 }
+
+.dark-mode {
+    .title {
+        color: var(--qlitre-colors-whiteAlpha-700);
+    }
+
+    .published,
+    .revised,
+    .description {
+        color: var(--qlitre-colors-whiteAlpha-500);
+    }
+}
 </style>
