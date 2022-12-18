@@ -4,16 +4,20 @@ import { getToc } from '../libs/cheerio-utils';
 
 type Props = {
     slug: string;
+    draftKey?: string;
 }
 
-const { slug } = defineProps<Props>()
+const { slug, draftKey } = defineProps<Props>()
+
+const params = { slug: slug, draftKey: draftKey }
 
 const { data: article, pending, error, refresh } = await useAsyncData<Post>('article',
-    () => $fetch('/api/postDetail', { params: { slug: slug } }))
+    () => $fetch('/api/postDetail', { params: params }))
 
 if (!article.value) {
     throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
 }
+
 
 let body = ''
 if (article.value.useRepeatBody) {
