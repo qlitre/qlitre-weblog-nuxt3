@@ -4,8 +4,9 @@ type Props = {
     tag: Tag;
     colorClass: 'active' | 'nonActive';
     isInline?: boolean;
+    count?: number;
 }
-const { tag, colorClass, isInline } = defineProps<Props>()
+const { tag, colorClass, isInline, count } = defineProps<Props>()
 
 function getPath(tagId: string) {
     if (colorClass == 'active' && isInline) return '/'
@@ -13,9 +14,10 @@ function getPath(tagId: string) {
 }
 
 </script>
+
 <template>
     <NuxtLink :class="`tag-badge ${colorClass}`" :to="getPath(tag.id)">
-        {{ tag.name }}
+        {{ tag.name }}<span v-if="count">({{ count }})</span>
     </NuxtLink>
 </template>
 

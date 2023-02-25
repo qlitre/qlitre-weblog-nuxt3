@@ -1,10 +1,12 @@
-import type { MicroCMSListContent } from "microcms-js-sdk";
+import type { MicroCMSListContent, MicroCMSListResponse } from "microcms-js-sdk";
 import type { MicroCMSImage } from "microcms-js-sdk";
 
 export type Tag = {
     name: string;
     sortOrder: number;
 } & MicroCMSListContent;
+
+export type TagList = MicroCMSListResponse<Tag>
 
 
 export type AmazonLink = {
@@ -34,3 +36,4 @@ export type Post = {
     repeated: Body[];
 } & MicroCMSListContent;
 
+export type PostList = MicroCMSListResponse<Post>
