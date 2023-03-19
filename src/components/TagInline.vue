@@ -13,7 +13,7 @@ const { data: tags } = await useFetch<TagList>('/api/tagList')
 const tagList = tags.value.contents
 // 選択中のタグがある場合先頭にもってくる
 if (selectedTagId) {
-    tagList.sort(function (first: Tag, second: Tag) {
+    tagList.sort((first: Tag, second: Tag) => {
         if (first.id == selectedTagId) {
             return -1;
         } else if (second.id == selectedTagId) {

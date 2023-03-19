@@ -26,7 +26,7 @@ const { toc } = defineProps<Props>()
 <style scoped lang="scss">
 .toc {
     padding: 1rem;
-    font-size: 1.3rem;
+    font-size: var(--font-size-sm);
     line-height: 1.8;
     background-color: var(--qlitre-colors-gray-100);
 }

@@ -115,12 +115,12 @@ img {
         margin-top: 0;
         margin-bottom: 2rem;
         line-height: 1.8;
-        font-size: 1.6rem;
+        font-size: var(--font-size-base);
         color: var(--qlitre-colors-gray-500);
     }
 
     h2 {
-        font-size: 2.4rem;
+        font-size: var(--font-size-xl);
         margin-top: 3rem;
         margin-bottom: 1rem;
     }
@@ -136,7 +136,7 @@ img {
     ul {
         margin: 2rem 0;
         line-height: 2;
-        font-size: 1.6rem;
+        font-size: var(--font-size-base);
         color: var(--qlitre-colors-gray-500);
         list-style-type: none;
     }

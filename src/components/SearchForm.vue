@@ -35,7 +35,7 @@ function submit() {
     
 <style scoped lang="scss">
 input[type=text] {
-    font-size: 14px;
+    font-size: var(--font-size-base);
     padding: 4px 8px;
     box-sizing: border-box;
     border-radius: 10px;

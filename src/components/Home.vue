@@ -54,7 +54,7 @@ useIndexHead()
         
 <style scoped lang="scss">
 .mb-2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .wrapper {

@@ -29,7 +29,7 @@ function getPath(tagId: string) {
     border: 1px solid var(--qlitre-colors-gray-500);
     padding: 4px 8px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: var(--font-size-xs);
     margin-right: 1rem;
     letter-spacing: 1px;
 

@@ -42,7 +42,7 @@ const { amazonLink } = defineProps<Props>()
 }
 
 .title {
-    font-size: 1.6rem;
+    font-size: var(--font-size-base);
     line-height: 1.8;
     font-weight: bold;
     margin-bottom: 2rem;
@@ -56,7 +56,7 @@ const { amazonLink } = defineProps<Props>()
 
 .link {
     color: var(--qlitre-colors-teal-400);
-    font-size: 1.6rem;
+    font-size: var(--font-size-base);
     font-weight: 500;
 
     &:hover {

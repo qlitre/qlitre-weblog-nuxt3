@@ -14,7 +14,7 @@
 }
 
 .top-to-link {
-  font-size: 1.6rem;
+  font-size: var(--font-size-base);
   color: var(--qlitre-colors-black);
   text-decoration: underline;
 }

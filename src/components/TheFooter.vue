@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="wrapper">
-            <p class="text"><small>© 2022 qlitre</small></p>
+            <p class="text"><small>© 2023 qlitre</small></p>
         </div>
     </footer>
 </template>
@@ -20,7 +20,7 @@
 
 .text {
     color: var(--qlitre-colors-gray-500);
-    font-size: 1.2rem;
+    font-size: var(--font-size-base);
 }
 
 .dark-mode .text {

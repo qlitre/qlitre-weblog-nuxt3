@@ -45,7 +45,7 @@ const hatenaLink = `https://b.hatena.ne.jp/entry/https://${config.siteUrl}/${id}
 
 <style scoped>
 .share {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 img {
@@ -62,7 +62,7 @@ img {
 .shareList {
   text-align: center;
   display: inline-block;
-  margin-right: 3rem;
+  margin-right: 1.5rem;
   vertical-align: middle;
 }
 

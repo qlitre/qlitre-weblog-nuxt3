@@ -7,8 +7,6 @@ type Props = {
     body: string;
 }
 
-
-
 const { body } = defineProps<Props>()
 
 const highlightBody = getHighlightBody(body)
@@ -25,7 +23,7 @@ const highlightBody = getHighlightBody(body)
         margin-bottom: 1rem;
         line-height: 1.9;
         font-weight: 500;
-        font-size: 1.6rem;
+        font-size: var(--font-size-base);
     }
 
     :deep(img) {
@@ -58,7 +56,6 @@ const highlightBody = getHighlightBody(body)
     }
 
     :deep(pre) * {
-        font-size: 1.6rem;
         line-height: 1.6;
         font-weight: normal;
     }
@@ -71,7 +68,7 @@ const highlightBody = getHighlightBody(body)
     }
 
     :deep(h1) {
-        font-size: 24px;
+        font-size: var(--font-size-xl);
         border-bottom: 1px solid #ccc;
         font-weight: bold;
         margin-top: 20px;
@@ -80,7 +77,7 @@ const highlightBody = getHighlightBody(body)
 
     :deep(h2),
     :deep(h3) {
-        font-size: 20px;
+        font-size: var(--font-size-xl);
         margin-top: 30px;
         margin-bottom: 10px;
         font-weight: bold;

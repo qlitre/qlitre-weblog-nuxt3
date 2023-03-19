@@ -40,10 +40,10 @@ function getPath(p: number) {
 .current,
 .link {
     display: inline-block;
-    margin: 0 2rem;
+    margin: 0 1rem;
     padding: 2px 0;
     text-align: center;
-    font-size: 3rem;
+    font-size: var(--font-size-2xl);
     font-weight: lighter;
 }
 

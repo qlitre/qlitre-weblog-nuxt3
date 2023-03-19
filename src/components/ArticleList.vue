@@ -31,14 +31,14 @@ const { posts } = defineProps<Props>()
 </template>
 <style scoped lang="scss">
 .article {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     width: 100%;
     align-items: center;
 }
 
 .date {
     margin-top: 1rem;
-    font-size: 1.6rem;
+    font-size: var(--font-size-base);
     color: var(--qlitre-colors-gray-700);
 }
 
@@ -47,7 +47,7 @@ const { posts } = defineProps<Props>()
 }
 
 .title {
-    font-size: 2.0rem;
+    font-size: var(--font-size-xl);
     color: var(--qlitre-colors-black);
     line-height: 1.8;
     font-weight: bold;
@@ -60,7 +60,7 @@ const { posts } = defineProps<Props>()
 
 .description {
     margin-top: 1rem;
-    font-size: 1.6rem;
+    font-size: var(--font-size-base);
     color: var(--qlitre-colors-gray-700);
     line-height: 1.8;
 
@@ -72,21 +72,7 @@ const { posts } = defineProps<Props>()
 }
 
 .tag {
-    margin-top: 2rem;
-}
-
-@media (max-width: 720px) {
-    .title {
-        font-size: 1.8rem;
-    }
-
-    .published {
-        font-size: 1.4rem;
-    }
-
-    .description {
-        font-size: 1.4rem;
-    }
+    margin-top: 1rem;
 }
 
 .dark-mode {

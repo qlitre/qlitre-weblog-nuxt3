@@ -40,7 +40,7 @@ useDetailHead(article.value)
 <template>
     <div class="wrapper">
         <div class="article-header">
-            <TagLabel v-for="tag in article.tag" :key="tag.id" :tag="tag" :colorClass="`active`"></TagLabel>
+            <TagLabel v-for="tag in article.tag" :key="tag.id" :tag="tag" :colorClass="`nonActive`"></TagLabel>
             <h1 class="title">
                 {{ article.title }}
             </h1>
@@ -118,24 +118,23 @@ useDetailHead(article.value)
 
 .date {
     margin-top: 1rem;
-    font-size: 1.6rem;
+    font-size: var(--font-size-base);
     color: var(--qlitre-colors-gray-700);
 }
 
 .published {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .title {
-    margin-top: 1rem;
-    font-size: 3rem;
+    margin-top: .5rem;
+    font-size: var(--font-size-2xl);
     color: var(--qlitre-colors-black);
     line-height: 1.8;
     font-weight: bold;
 }
 
 .dark-mode {
-
     .title,
     .revised,
     .published,

@@ -47,7 +47,7 @@ const toggleColorMode = () => {
 
 <style scoped lang="scss">
 .header {
-    padding: 2rem 4%;
+    padding: 1rem 4%;
     width: 100%;
     z-index: 10;
     position: fixed;
@@ -65,7 +65,7 @@ const toggleColorMode = () => {
 }
 
 .site-title {
-    font-size: 2.4rem;
+    font-size: var(--font-size-xl);
     color: var(--qlitre-colors-black);
     margin: 0;
     padding: 0;
@@ -80,7 +80,7 @@ const toggleColorMode = () => {
 
     .nav-item {
         margin-right: 1.5rem;
-        font-size: 1.8rem;
+        font-size: var(--font-size-base);
         font-weight: bold;
         letter-spacing: 1px;
     }
@@ -140,20 +140,12 @@ const toggleColorMode = () => {
     }
 }
 
-@media (max-width: 720px) {
-    .site-title {
-        font-size: 1.8rem;
-    }
-
-    a {
-        font-size: 1.4rem;
-    }
-}
 
 .dark-mode {
     header {
         background-color: var(--qlitre-colors-gray-900);
     }
+
     .site-title {
         color: var(--qlitre-colors-gray-400);
     }
@@ -164,5 +156,4 @@ const toggleColorMode = () => {
         }
     }
 }
-
 </style>
