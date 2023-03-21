@@ -20,11 +20,8 @@ if (tagId) {
     queries.filters = `tag[contains]${tagId}`
 }
 
-const { data: posts, pending, error, refresh } = await useAsyncData('post-list', () =>
-    $fetch('/api/postList',
-        { method: 'GET', params: queries }
-    ),
-)
+const { data: posts } = await useFetch('/api/postList',
+    { method: 'GET', params: queries })
 
 const numPages = Math.ceil(posts.value.totalCount / limit)
 

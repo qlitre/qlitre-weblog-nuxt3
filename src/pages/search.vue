@@ -15,8 +15,7 @@ const params: MicroCMSQueries = {
   fields: 'id,title,description,tag,publishedAt,revisedAt'
 }
 
-const { data: posts, pending, error, refresh } = await useAsyncData<PostList>(
-  'post-list-w-search', () => $fetch('/api/postList', { params: params }),)
+const { data: posts } = await useFetch('/api/postList', { params: params })
 
 const numPages = Math.ceil(posts.value.totalCount / limit)
 

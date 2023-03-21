@@ -21,7 +21,6 @@ export default defineNuxtConfig({
         ['@nuxtjs/google-adsense', {
             id: GA_ADSENSE_ID
         }],
-        ['@nuxtjs/color-mode']
     ],
     'google-adsense': {
         pageLevelAds: true,

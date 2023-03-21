@@ -11,13 +11,11 @@ const { slug, draftKey } = defineProps<Props>()
 
 const params = { slug: slug, draftKey: draftKey }
 
-const { data: article, pending, error, refresh } = await useAsyncData<Post>('article',
-    () => $fetch('/api/postDetail', { params: params }))
+const { data: article } = await useFetch('/api/postDetail', { params: params })
 
 if (!article.value) {
     throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
 }
-
 
 let body = ''
 if (article.value.useRepeatBody) {
@@ -135,6 +133,7 @@ useDetailHead(article.value)
 }
 
 .dark-mode {
+
     .title,
     .revised,
     .published,
