@@ -8,7 +8,8 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0"
+    "@types/node": "^18.15.8",
+    "nuxt": "^3.3.2"
   },
   "dependencies": {
     "@nuxtjs/google-adsense": "^2.1.0",
