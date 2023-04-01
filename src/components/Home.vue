@@ -31,9 +31,12 @@ useIndexHead()
             
 <template>
     <div class="wrapper">
+        <!--
+        static hosting すると動かないのでとりあえず非表示
         <div class="mb-2">
             <SearchForm />
         </div>
+        -->
         <div class="mb-2">
             <TagInline :selectedTagId="tagId" />
         </div>
