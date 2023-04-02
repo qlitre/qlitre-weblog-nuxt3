@@ -14,60 +14,106 @@ function getPath(p: number) {
     return `/page/${p}`
 }
 
+const pager: number[] = []
+for (let i = 1; i < numPages + 1; i++) {
+    if (i < current - 2) continue
+    if (i > current + 2) continue
+    pager.push(i)
+}
+
 </script>
     
 <template>
-    <div class="pagination">
-        <NuxtLink v-for="num in numPages" :key="num" :class="[num == current ? 'current' : 'link']" :to="getPath(num)">
-            {{ num }}
-        </NuxtLink>
+    <div class="wrapper">
+        <ul class="pager">
+            <li v-if="current > 1" class="page arrow">
+                <nuxt-link :to="getPath(current - 1)">
+                    <img src="../assets/images/icon_arrow_left.svg" width="24" height="24" alt="前のページへ" />
+                </nuxt-link>
+            </li>
+            <li v-if="current > 3" class="page">
+                <nuxt-link :to="getPath(1)">
+                    1
+                </nuxt-link>
+            </li>
+            <li v-if="current > 4" class="omission">
+                ...
+            </li>
+            <li v-for="p in pager" :key="p" class="page" :class="{ active: current === p }">
+                <nuxt-link :to="getPath(p)">
+                    {{ p }}
+                </nuxt-link>
+            </li>
+            <li v-if="current < numPages-3" class="omission">
+                ...
+            </li>
+            <li v-if="current + 2 < numPages" class="page">
+                <nuxt-link :to="getPath(numPages)">
+                    {{ numPages }}
+                </nuxt-link>
+            </li>
+            <li v-if="current < numPages" class="page arrow">
+                <nuxt-link :to="getPath(current + 1)">
+                    <img src="../assets/images/icon_arrow_right.svg" width="24" height="24" alt="次のページへ" />
+                </nuxt-link>
+            </li>
+        </ul>
     </div>
 </template>
     
 <style scoped lang="scss">
-.pagination {
-    position: relative;
-    width: 100%;
-    margin: 8em 0 8rem;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    line-height: 1.1;
-    text-align: center;
-    vertical-align: middle;
+li {
+    list-style: none;
 }
 
-
-.current,
-.link {
-    display: inline-block;
-    margin: 0 1rem;
-    padding: 2px 0;
-    text-align: center;
-    font-size: var(--font-size-2xl);
-    font-weight: lighter;
+.wrapper {
+    padding: 16px 0;
 }
 
-.current {
-    color: #000;
+.pager {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+    font-size: var(--font-size-xl);
+    font-weight: 500;
 }
 
-
-.link {
-    color: #A2A2A6;
+.omission {
+    color: var(--qlitre-colors-gray-400);
+    margin: 4px 12px;
 }
 
-@media (max-width: 720px) {
+.page {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 4px;
 
-    .link,
-    .current {
-        font-size: 2rem;
-        margin: 0 1.5rem;
+    &.arrow {
+        margin: 4px 12px;
     }
-}
 
-.dark-mode {
-    .pagination:deep(.current) {
-        color: var(--qlitre-colors-white);
+    &.active {
+        background-color: var(--qlitre-colors-gray-400);
+
+        a,
+        a:hover {
+            color: var(--qlitre-colors-white);
+        }
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: var(--qlitre-colors-gray-600);
+
+        &:hover {
+            color: var(--qlitre-colors-gray-400);
+        }
     }
 }
 </style>

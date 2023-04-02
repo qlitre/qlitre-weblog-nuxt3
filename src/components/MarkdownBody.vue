@@ -123,28 +123,5 @@ const highlightBody = getHighlightBody(body)
     }
 }
 
-.dark-mode {
-
-    .md:deep(h2),
-    .md:deep(h3) {
-        color: var(--qlitre-colors-whiteAlpha-700);
-    }
-
-    .md:deep(p),
-    .md:deep(ul),
-    .md:deep(ol) {
-        color: var(--qlitre-colors-whiteAlpha-700);
-    }
-
-    .md:deep(p) code {
-        background-color: var(--qlitre-colors-whiteAlpha-400);
-        color: var(--qlitre-colors-whiteAlpha-700);
-    }
-
-    .md:deep(pre),
-    .md:deep(pre) .hljs {
-        background-color: var(--qlitre-colors-gray-900);
-    }
-}
 </style>
     

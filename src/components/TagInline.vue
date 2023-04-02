@@ -52,8 +52,9 @@ function getClass(tagId: string) {
     margin-bottom: 3rem;
     overflow-x: auto;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
     padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--qlitre-colors-gray-300) var(--qlitre-colors-white);
 }
 
 .inline::-webkit-scrollbar {
@@ -73,10 +74,5 @@ function getClass(tagId: string) {
     box-shadow: none;
 }
 
-.dark-mode {
-    .inline::-webkit-scrollbar-thumb {
-        background: var(--qlitre-colors-gray-500);
-    }
-}
 </style>
     

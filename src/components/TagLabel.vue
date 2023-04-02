@@ -31,8 +31,7 @@ function getPath(tagId: string) {
     cursor: pointer;
     font-size: var(--font-size-xs);
     margin-right: 1rem;
-    letter-spacing: 1px;
-
+    letter-spacing: 1.5px;
     &:hover {
         opacity: .6;
     }
@@ -40,7 +39,7 @@ function getPath(tagId: string) {
 
 .active {
     color: var(--qlitre-colors-white);
-    background-color: var(--qlitre-colors-teal-400);
+    background-color: var(--qlitre-colors-gray-500);
     border: none;
 }
 
@@ -49,13 +48,4 @@ function getPath(tagId: string) {
     background-color: var(--qlitre-colors-white);
 }
 
-.dark-mode {
-    .nonActive {
-        background-color: var(--qlitre-colors-gray-300);
-    }
-
-    .active {
-        background-color: var(--qlitre-colors-teal-700);
-    }
-}
 </style>

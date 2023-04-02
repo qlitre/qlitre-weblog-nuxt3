@@ -64,8 +64,6 @@ const { amazonLink } = defineProps<Props>()
     }
 }
 
-
-
 .img {
     max-height: 150px;
     width: auto;

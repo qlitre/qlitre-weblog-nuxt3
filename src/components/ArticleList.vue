@@ -43,7 +43,7 @@ const { posts } = defineProps<Props>()
 }
 
 .published {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .title {
@@ -73,17 +73,5 @@ const { posts } = defineProps<Props>()
 
 .tag {
     margin-top: 1rem;
-}
-
-.dark-mode {
-    .title {
-        color: var(--qlitre-colors-whiteAlpha-700);
-    }
-
-    .published,
-    .revised,
-    .description {
-        color: var(--qlitre-colors-whiteAlpha-500);
-    }
 }
 </style>

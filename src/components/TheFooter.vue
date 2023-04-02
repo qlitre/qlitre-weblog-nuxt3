@@ -23,7 +23,4 @@
     font-size: var(--font-size-base);
 }
 
-.dark-mode .text {
-    color: var(--qlitre-colors-whiteAlpha-700);
-}
 </style>

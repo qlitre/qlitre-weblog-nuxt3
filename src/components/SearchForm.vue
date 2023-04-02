@@ -52,11 +52,4 @@ input[type=text]:focus {
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-.dark-mode {
-    input[type=text] {
-        border-color: var(--qlitre-colors-whiteAlpha-300);
-        background-color: var(--qlitre-colors-whiteAlpha-300);
-        color: var(--qlitre-colors-whiteAlpha-500);
-    }
-}
 </style>

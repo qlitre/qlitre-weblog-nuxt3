@@ -76,21 +76,4 @@ import { config } from '../settings/siteSettings'
         }
     }
 }
-
-
-.dark-mode {
-    header {
-        background-color: var(--qlitre-colors-gray-900);
-    }
-
-    .site-title {
-        color: var(--qlitre-colors-gray-400);
-    }
-
-    .main-nav {
-        a {
-            color: var(--qlitre-colors-gray-400)
-        }
-    }
-}
 </style>

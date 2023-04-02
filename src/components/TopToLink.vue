@@ -22,10 +22,4 @@
 .top-to-link:hover {
   color: var(--qlitre-colors-cyan-700);
 }
-
-.dark-mode {
-  .top-to-link {
-    color: var(--qlitre-colors-whiteAlpha-700);
-  }
-}
 </style>

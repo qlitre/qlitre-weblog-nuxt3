@@ -71,23 +71,5 @@ const { toc } = defineProps<Props>()
     color: var(--qlitre-colors-blue-500);
     opacity: .9;
 }
-
-.dark-mode {
-    .toc {
-        background-color: var(--qlitre-colors-whiteAlpha-300);
-        color: var(--qlitre-colors-whiteAlpha-700);
-    }
-
-    .list:deep(a) {
-        color: var(--qlitre-colors-whiteAlpha-700);
-        &:hover {
-            color: var(--qlitre-colors-whiteAlpha-700);
-            color: var(--qlitre-colors-blue-300);
-            opacity: .9;
-        }
-    }
-
-
-}
 </style>
   
