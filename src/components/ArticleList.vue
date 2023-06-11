@@ -16,12 +16,12 @@ const { posts } = defineProps<Props>()
                     {{ post.title }}
                 </h1>
             </NuxtLink>
-            <p class="date">
-                <span class="revised">
-                    更新日：{{ $formatDate(post.revisedAt) }}
-                </span>
+            <p class="date">                
                 <span class="published">
                     公開日：{{ $formatDate(post.publishedAt) }}
+                </span>
+                <span class="revised">
+                    更新日：{{ $formatDate(post.revisedAt) }}
                 </span>
             </p>
             <p class="description">{{ post.description }}</p>
@@ -42,7 +42,7 @@ const { posts } = defineProps<Props>()
     color: var(--qlitre-colors-gray-700);
 }
 
-.published {
+.revised {
     margin-left: 1rem;
 }
 

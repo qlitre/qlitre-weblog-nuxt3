@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Post } from '../types/blog';
 import { getToc } from '../libs/cheerio-utils';
+import { config } from '../settings/siteSettings'
 
 type Props = {
     slug: string;
@@ -9,7 +10,12 @@ type Props = {
 
 const { slug, draftKey } = defineProps<Props>()
 
-const params = { slug: slug, draftKey: draftKey }
+
+const params = {
+    slug: slug,
+    draftKey: draftKey,
+    fields: config.postDetailField
+}
 
 const { data: article } = await useFetch('/api/postDetail', { params: params })
 
