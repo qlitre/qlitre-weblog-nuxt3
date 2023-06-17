@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { BLOG_PER_PAGE } from '../settings/siteSettings'
 import { MicroCMSQueries } from 'microcms-js-sdk'
+import { config } from '../settings/siteSettings'
+
 
 type Props = {
     page: number,
@@ -12,9 +14,9 @@ const { page, tagId } = defineProps<Props>()
 const limit = BLOG_PER_PAGE
 const queries: MicroCMSQueries = {
     limit: limit,
-    orders: '-revisedAt',
+    orders: '-createdAt',
     offset: (page - 1) * limit,
-    fields: 'id,title,description,tag,publishedAt,revisedAt'
+    fields: config.postListField
 }
 if (tagId) {
     queries.filters = `tag[contains]${tagId}`

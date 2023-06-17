@@ -9,16 +9,18 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.8",
+    "@types/prismjs": "^1.26.0",
     "nuxt": "^3.5.0"
   },
   "dependencies": {
     "@nuxtjs/google-adsense": "^2.1.0",
     "cheerio": "^1.0.0-rc.12",
     "dayjs": "^1.11.6",
-    "highlight.js": "^11.6.0",
     "microcms-js-sdk": "^2.3.1",
     "postcss": "^8.4.19",
+    "prismjs": "^1.29.0",
     "sass": "^1.56.1",
-    "sass-loader": "^13.2.0"
+    "sass-loader": "^13.2.0",
+    "vite-plugin-prismjs": "^0.0.8"
   }
 }

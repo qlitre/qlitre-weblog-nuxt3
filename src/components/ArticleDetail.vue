@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Post } from '../types/blog';
 import { getToc } from '../libs/cheerio-utils';
 import { config } from '../settings/siteSettings'
 

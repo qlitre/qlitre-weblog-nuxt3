@@ -1,7 +1,5 @@
 <script setup lang="ts">
-
-import 'highlight.js/styles/hybrid.css'
-import { getHighlightBody } from '../libs/cheerio-utils'
+import Prism from 'prismjs'
 
 type Props = {
     body: string;
@@ -9,11 +7,13 @@ type Props = {
 
 const { body } = defineProps<Props>()
 
-const highlightBody = getHighlightBody(body)
+onMounted(() =>
+    Prism.highlightAll()
+)
 
 </script>
 <template>
-    <div class="md" v-html="highlightBody"></div>
+    <div class="md" v-html="body"></div>
 </template>
     
 <style scoped lang="scss">
@@ -50,14 +50,18 @@ const highlightBody = getHighlightBody(body)
 
     :deep(pre) {
         margin-top: 1rem;
-        background-color: #1D1F21;
         padding: 2% 4%;
-        overflow-x: scroll;
+        border-radius: 5px;
     }
 
     :deep(pre) * {
         line-height: 1.6;
         font-weight: normal;
+        font-size: var(--font-size-sm);
+    }
+
+    :deep(.toolbar-item) {
+        font-size: var(--font-size-sm);
     }
 
     :deep(blockquote) {
@@ -113,7 +117,6 @@ const highlightBody = getHighlightBody(body)
     :deep(ol) {
         list-style-type: decimal;
     }
-
 }
 
 
@@ -122,6 +125,5 @@ const highlightBody = getHighlightBody(body)
         max-width: 100%;
     }
 }
-
 </style>
     
