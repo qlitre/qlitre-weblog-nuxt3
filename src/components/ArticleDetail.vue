@@ -48,11 +48,11 @@ useDetailHead(article.value)
                 {{ article.title }}
             </h1>
             <p class="date">
-                <span class="revised">
-                    更新日：{{ $formatDate(article.revisedAt) }}
-                </span>
                 <span class="published">
                     公開日：{{ $formatDate(article.publishedAt) }}
+                </span>
+                <span class="revised">
+                    更新日：{{ $formatDate(article.revisedAt) }}
                 </span>
             </p>
             <Share :id="article.id" :title="article.title" />
@@ -125,7 +125,7 @@ useDetailHead(article.value)
     color: var(--qlitre-colors-gray-700);
 }
 
-.published {
+.revised {
     margin-left: 1rem;
 }
 

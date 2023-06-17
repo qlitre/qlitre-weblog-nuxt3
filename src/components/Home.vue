@@ -14,7 +14,7 @@ const { page, tagId } = defineProps<Props>()
 const limit = BLOG_PER_PAGE
 const queries: MicroCMSQueries = {
     limit: limit,
-    orders: '-createdAt',
+    orders: '-publishedAt',
     offset: (page - 1) * limit,
     fields: config.postListField
 }

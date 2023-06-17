@@ -16,7 +16,7 @@ const { posts } = defineProps<Props>()
                     {{ post.title }}
                 </h1>
             </NuxtLink>
-            <p class="date">                
+            <p class="date">
                 <span class="published">
                     公開日：{{ $formatDate(post.publishedAt) }}
                 </span>

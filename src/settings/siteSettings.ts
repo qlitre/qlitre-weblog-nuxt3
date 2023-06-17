@@ -10,6 +10,6 @@ export const config = {
         twitterProf: "https://twitter.com/kuri_tter",
         buyMeACoffee: "https://www.buymeacoffee.com/qlitre",
     },
-    postListField: 'id,title,description,tag',
-    postDetailField: 'id,title,text,description,keywords,thumbnail,tag,tocVisible,useRepeatBody,repeated,related'
+    postListField: 'id,title,description,tag,publishedAt,revisedAt',
+    postDetailField: 'id,title,text,description,keywords,thumbnail,tag,tocVisible,useRepeatBody,repeated,related,publishedAt,revisedAt'
 }
