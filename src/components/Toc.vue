@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 type Toc = {
     id: string;
     name: string;
@@ -28,7 +29,7 @@ const { toc } = defineProps<Props>()
     padding: 1rem;
     font-size: var(--font-size-sm);
     line-height: 1.8;
-    background-color: var(--qlitre-colors-gray-100);
+    background-color: var(--c-gray-100);
 }
 
 @media (min-width: 1024px) {
@@ -64,11 +65,11 @@ const { toc } = defineProps<Props>()
 }
 
 .list:deep(a) {
-    color: var(--qlitre-colors-gray-700);
+    color: var(--c-gray-700);
 }
 
 .list:deep(a):hover {
-    color: var(--qlitre-colors-blue-500);
+    color: var(--c-blue-500);
     opacity: .9;
 }
 </style>

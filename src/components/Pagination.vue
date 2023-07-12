@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 type Props = {
     numPages: number;
     current: number;
@@ -88,7 +89,7 @@ li {
 }
 
 .omission {
-    color: var(--qlitre-colors-gray-400);
+    color: var(--c-gray-400);
     margin: 4px 12px;
 }
 
@@ -103,11 +104,11 @@ li {
     }
 
     &.active {
-        background-color: var(--qlitre-colors-gray-400);
+        background-color: var(--c-gray-400);
 
         a,
         a:hover {
-            color: var(--qlitre-colors-white);
+            color: var(--c-white);
         }
     }
 
@@ -116,10 +117,10 @@ li {
         justify-content: center;
         align-items: center;
         height: 100%;
-        color: var(--qlitre-colors-gray-600);
+        color: var(--c-gray-600);
 
         &:hover {
-            color: var(--qlitre-colors-gray-400);
+            color: var(--c-gray-400);
         }
     }
 }

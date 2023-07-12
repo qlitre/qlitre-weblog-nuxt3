@@ -15,11 +15,11 @@
 
 .top-to-link {
   font-size: var(--font-size-base);
-  color: var(--qlitre-colors-black);
+  color: var(--c-black);
   text-decoration: underline;
 }
 
 .top-to-link:hover {
-  color: var(--qlitre-colors-cyan-700);
+  color: var(--c-cyan-700);
 }
 </style>

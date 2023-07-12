@@ -19,7 +19,7 @@
 }
 
 .text {
-    color: var(--qlitre-colors-gray-500);
+    color: var(--c-gray-500);
     font-size: var(--font-size-base);
 }
 

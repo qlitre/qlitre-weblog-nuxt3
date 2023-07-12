@@ -5,8 +5,8 @@ import { config } from '../settings/siteSettings'
 </script>
 
 <template>
-    <header class="header">
-        <div class="container">
+    <header class="root">
+        <div class="header">
             <nuxt-link :to='`/`'>
                 <h1 class="site-title">
                     {{ config.siteName }}
@@ -29,29 +29,26 @@ import { config } from '../settings/siteSettings'
 </template>
 
 <style scoped lang="scss">
-.header {
-    padding: 1rem 4%;
-    width: 100%;
-    z-index: 10;
-    position: fixed;
+.root {
+    position: sticky;
     top: 0;
-    background-color: var(--qlitre-colors-gray-100);
+    backdrop-filter: blur(8px);
 }
 
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
+.header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    vertical-align: baseline;
+    justify-content: space-between;
+    padding-top: var(--spacing-4);
+    padding-bottom: var(--spacing-4);
+    @include appContainer;
 }
+
+
 
 .site-title {
     font-size: var(--font-size-xl);
-    color: var(--qlitre-colors-black);
-    margin: 0;
-    padding: 0;
+    color: var(--c-black);
     letter-spacing: 1px;
 }
 
@@ -69,7 +66,7 @@ import { config } from '../settings/siteSettings'
     }
 
     a {
-        color: var(--qlitre-colors-black);
+        color: var(--c-black);
 
         &:hover {
             opacity: 0.6;

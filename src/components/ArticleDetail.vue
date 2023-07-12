@@ -1,6 +1,12 @@
 <script setup lang="ts">
+
 import { getToc } from '../libs/cheerio-utils';
 import { config } from '../settings/siteSettings'
+
+const layout = 'container';
+definePageMeta({
+    layout: false,
+});
 
 type Props = {
     slug: string;
@@ -41,7 +47,7 @@ useDetailHead(article.value)
 </script>
         
 <template>
-    <div class="wrapper">
+    <NuxtLayout :name="layout">
         <div class="article-header">
             <TagLabel v-for="tag in article.tag" :key="tag.id" :tag="tag" :colorClass="`nonActive`"></TagLabel>
             <h1 class="title">
@@ -71,7 +77,7 @@ useDetailHead(article.value)
             </div>
         </div>
         <TopToLink />
-    </div>
+    </NuxtLayout>
 </template>
     
 <style scoped lang="scss">
@@ -122,7 +128,7 @@ useDetailHead(article.value)
 .date {
     margin-top: 1rem;
     font-size: var(--font-size-base);
-    color: var(--qlitre-colors-gray-700);
+    color: var(--c-gray-700);
 }
 
 .revised {
@@ -132,7 +138,7 @@ useDetailHead(article.value)
 .title {
     margin-top: .5rem;
     font-size: var(--font-size-2xl);
-    color: var(--qlitre-colors-black);
+    color: var(--c-black);
     line-height: 1.8;
     font-weight: bold;
 }

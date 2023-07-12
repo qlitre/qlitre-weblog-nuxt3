@@ -1,5 +1,7 @@
 <script setup lang="ts">
+
 import { Tag } from '../types/blog'
+
 type Props = {
     tag: Tag;
     colorClass: 'active' | 'nonActive';
@@ -26,26 +28,26 @@ function getPath(tagId: string) {
     display: inline-block;
     border-radius: 4px;
     text-align: center;
-    border: 1px solid var(--qlitre-colors-gray-500);
+    border: 1px solid var(--c-gray-500);
     padding: 4px 8px;
     cursor: pointer;
     font-size: var(--font-size-xs);
     margin-right: 1rem;
     letter-spacing: 1.5px;
+
     &:hover {
         opacity: .6;
     }
 }
 
 .active {
-    color: var(--qlitre-colors-white);
-    background-color: var(--qlitre-colors-gray-500);
+    color: var(--c-white);
+    background-color: var(--c-gray-500);
     border: none;
 }
 
 .nonActive {
-    color: var(--qlitre-colors-gray-700);
-    background-color: var(--qlitre-colors-white);
+    color: var(--c-gray-700);
+    background-color: var(--c-white);
 }
-
 </style>

@@ -1,8 +1,13 @@
 <script setup lang="ts">
+
 import { BLOG_PER_PAGE } from '../settings/siteSettings'
 import { MicroCMSQueries } from 'microcms-js-sdk'
 import { config } from '../settings/siteSettings'
 
+const layout = 'container';
+definePageMeta({
+    layout: false,
+});
 
 type Props = {
     page: number,
@@ -32,13 +37,7 @@ useIndexHead()
 </script>
             
 <template>
-    <div class="wrapper">
-        <!--
-            jamstack構成のためpending
-            <div class="mb-2">
-                <SearchForm />
-            </div>
-            -->
+    <NuxtLayout :name="layout">
         <div class="mb-2">
             <TagInline :selectedTagId="tagId" />
         </div>
@@ -51,32 +50,14 @@ useIndexHead()
             </div>
         </div>
         <Pagination :numPages="numPages" :current="page" :tagId="tagId" />
-    </div>
+    </NuxtLayout>
 </template>
         
 <style scoped lang="scss">
 .mb-2 {
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-6);
 }
 
-.wrapper {
-    padding-top: 112px;
-    position: relative;
-    width: 960px;
-    margin: 0 auto 0;
-}
-
-@media (max-width: 1024px) {
-    .wrapper {
-        max-width: 600px;
-        position: relative;
-        width: 100%;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        margin-right: auto;
-        margin-left: auto;
-    }
-}
 
 @media (min-width: 1024px) {
     .post-wrapper {

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import Prism from 'prismjs'
 
 type Props = {
@@ -40,8 +41,8 @@ onMounted(() =>
     }
 
     :deep(p) code {
-        background-color: var(--qlitre-colors-gray-300);
-        color: var(--qlitre-colors-gray-700);
+        background-color: var(--c-gray-300);
+        color: var(--c-gray-700);
         padding: 0.2em 0.4em;
         font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
         margin-left: 0.5rem;
@@ -66,9 +67,9 @@ onMounted(() =>
 
     :deep(blockquote) {
         padding: 15px;
-        border-left: 2px solid var(--qlitre-colors-gray-300);
+        border-left: 2px solid var(--c-gray-300);
         border-radius: 2px;
-        color: var(--qlitre-colors-gray-500);
+        color: var(--c-gray-500);
     }
 
     :deep(h1) {

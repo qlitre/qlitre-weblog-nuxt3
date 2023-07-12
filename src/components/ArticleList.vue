@@ -1,5 +1,7 @@
 <script setup lang="ts">
+
 import type { Post } from '../types/blog'
+
 type Props = {
     posts: Post[]
 }
@@ -38,8 +40,8 @@ const { posts } = defineProps<Props>()
 
 .date {
     margin-top: 1rem;
-    font-size: var(--font-size-base);
-    color: var(--qlitre-colors-gray-700);
+    font-size: var(--font-size-sm);
+    color: var(--c-gray-700);
 }
 
 .revised {
@@ -47,8 +49,8 @@ const { posts } = defineProps<Props>()
 }
 
 .title {
-    font-size: var(--font-size-xl);
-    color: var(--qlitre-colors-black);
+    font-size: var(--font-size-lg);
+    color: var(--c-black);
     line-height: 1.8;
     font-weight: bold;
 
@@ -60,15 +62,15 @@ const { posts } = defineProps<Props>()
 
 .description {
     margin-top: 1rem;
-    font-size: var(--font-size-base);
-    color: var(--qlitre-colors-gray-700);
+    font-size: var(--font-size-sm);
+    color: var(--c-gray-700);
     line-height: 1.8;
 
 }
 
 .post-link:hover {
     opacity: .8;
-    text-decoration: underline var(--qlitre-colors-gray-700);
+    text-decoration: underline var(--c-gray-700);
 }
 
 .tag {

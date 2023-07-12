@@ -1,5 +1,7 @@
 <script setup lang="ts">
+
 import { AmazonLink } from '../types/blog'
+
 type Props = {
     amazonLink: AmazonLink
 }
@@ -30,23 +32,23 @@ const { amazonLink } = defineProps<Props>()
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    border: 1px solid;
-    border-color: var(--qlitre-colors-teal-400);
-    border-radius: 10px;
-    margin: 3rem 0;
+    padding: var(--spacing-4) var(--spacing-5);
+    border: var(--border-1);
+    border-color: var(--c-teal-400);
+    border-radius: var(--radius-xl);
+    margin: var(--spacing-5) 0;
 }
 
 .left {
-    padding-right: 2rem;
+    padding-right: var(--spacing-4);
 }
 
 .title {
     font-size: var(--font-size-base);
     line-height: 1.8;
     font-weight: bold;
-    margin-bottom: 2rem;
-    color: var(--qlitre-colors-gray-500);
+    margin-bottom: var(--spacing-4);
+    color: var(--c-gray-500);
     display: block;
 
     &:hover {
@@ -55,7 +57,7 @@ const { amazonLink } = defineProps<Props>()
 }
 
 .link {
-    color: var(--qlitre-colors-teal-400);
+    color: var(--c-teal-400);
     font-size: var(--font-size-base);
     font-weight: 500;
 

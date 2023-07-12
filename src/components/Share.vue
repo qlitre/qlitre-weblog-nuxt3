@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import { config } from '../settings/siteSettings'
 
 type Props = {

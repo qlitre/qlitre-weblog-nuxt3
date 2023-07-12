@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import { Tag, TagList } from '../types/blog'
 import { MicroCMSQueries } from 'microcms-js-sdk'
 import { getTagReferencedCount } from '../libs/referenced-count'
@@ -49,30 +50,29 @@ function getClass(tagId: string) {
     
 <style scoped lang="scss">
 .inline {
-    margin-bottom: 3rem;
+    margin-bottom: var(--spacing-4);
     overflow-x: auto;
     white-space: nowrap;
-    padding-bottom: 1rem;
+    padding-bottom: var(--spacing-2);
     scrollbar-width: thin;
-    scrollbar-color: var(--qlitre-colors-gray-300) var(--qlitre-colors-white);
+    scrollbar-color: var(--c-gray-300) var(--c-white);
 }
 
 .inline::-webkit-scrollbar {
-    width: 3px;
+    width: 2px;
 }
 
 .inline::-webkit-scrollbar-track {
-    background: var(--qlitre-colors-white);
+    background: var(--c-white);
     border: none;
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     box-shadow: inset 0 0 2px #777;
 }
 
 .inline::-webkit-scrollbar-thumb {
-    background: var(--qlitre-colors-gray-300);
-    border-radius: 5px;
+    background: var(--c-gray-300);
+    border-radius: var(--radius-sm);
     box-shadow: none;
 }
-
 </style>
     

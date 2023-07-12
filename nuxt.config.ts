@@ -83,6 +83,13 @@ export default defineNuxtConfig({
         pageLevelAds: true,
     },
     vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: '@import "@/assets/scss/system.scss";',
+                },
+            },
+        },
         plugins: [
             prismjs({
                 languages: ['cpp',

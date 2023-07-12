@@ -116,7 +116,7 @@ img {
         margin-bottom: 2rem;
         line-height: 1.8;
         font-size: var(--font-size-base);
-        color: var(--qlitre-colors-gray-500);
+        color: var(--c-gray-500);
     }
 
     h2 {
@@ -126,7 +126,7 @@ img {
     }
 
     a {
-        color: var(--qlitre-colors-blue-500);
+        color: var(--c-blue-500);
     }
 
     a:hover {
@@ -137,7 +137,7 @@ img {
         margin: 2rem 0;
         line-height: 2;
         font-size: var(--font-size-base);
-        color: var(--qlitre-colors-gray-500);
+        color: var(--c-gray-500);
         list-style-type: none;
     }
 }
