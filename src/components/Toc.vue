@@ -13,7 +13,6 @@ const { toc } = defineProps<Props>()
 
 <template>
     <ul class="toc">
-        <span class="title">目次</span>
         <li :class="`list ${item.name}`" v-for="item in toc" :key="item.id">
             <a :href="`#${item.id}`">
                 {{ item.text }}
@@ -26,23 +25,25 @@ const { toc } = defineProps<Props>()
   
 <style scoped lang="scss">
 .toc {
-    padding: 1rem;
-    font-size: var(--font-size-sm);
+    padding: var(--spacing-4);
+    padding-right: 0;
+    font-size: var(--font-size-xs);
     line-height: 1.8;
-    background-color: var(--c-gray-100);
+    border: var(--border-1);
+    border-color: var(--c-teal-400);
 }
 
 @media (min-width: 1024px) {
     .toc {
         position: sticky;
-        top: 100px;
-        margin-left: 1rem;
+        top: 80px;
+        margin-left: var(--spacing-8);        
     }
 }
 
 @media (max-width: 1024px) {
     .toc {
-        margin: 1rem 0;
+        margin: var(--spacing-4) 0;
     }
 }
 
@@ -69,7 +70,7 @@ const { toc } = defineProps<Props>()
 }
 
 .list:deep(a):hover {
-    color: var(--c-blue-500);
+    color: var(--c-teal-400);
     opacity: .9;
 }
 </style>

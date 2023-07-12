@@ -74,7 +74,6 @@ onMounted(() =>
 
     :deep(h1) {
         font-size: var(--font-size-xl);
-        border-bottom: 1px solid #ccc;
         font-weight: bold;
         margin-top: 20px;
         margin-bottom: 10px;
@@ -88,9 +87,6 @@ onMounted(() =>
         font-weight: bold;
     }
 
-    :deep(h2) {
-        border-bottom: 1px solid #ccc;
-    }
 
     :deep(a) {
         color: #1266f1;

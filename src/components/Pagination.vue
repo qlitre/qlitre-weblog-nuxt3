@@ -50,7 +50,7 @@ for (let i = 1; i < numPages + 1; i++) {
                 </nuxt-link>
             </li>
             <!--現在のページが全ページ数の-4以下だったら...を打つ-->
-            <li v-if="current < numPages-3" class="omission">
+            <li v-if="current < numPages - 3" class="omission">
                 ...
             </li>
             <!--現在のページが全ページ数の-3以下だったら最後のページを表示-->
@@ -104,11 +104,12 @@ li {
     }
 
     &.active {
-        background-color: var(--c-gray-400);
+        border: var(--border-1);
+        border-color: var(--c-teal-400);
 
         a,
         a:hover {
-            color: var(--c-white);
+            color: var(--c-teal-400);
         }
     }
 

@@ -61,7 +61,6 @@ useDetailHead(article.value)
                     更新日：{{ $formatDate(article.revisedAt) }}
                 </span>
             </p>
-            <Share :id="article.id" :title="article.title" />
         </div>
         <div class="post-wrapper">
             <div class="posts">
@@ -76,37 +75,25 @@ useDetailHead(article.value)
                 <Toc :toc="toc" />
             </div>
         </div>
+        <Share :id="article.id" :title="article.title" />
         <TopToLink />
     </NuxtLayout>
 </template>
     
 <style scoped lang="scss">
-.wrapper {
-    padding-top: 112px;
-    position: relative;
-    width: 960px;
-    margin: 0 auto 0;
-}
-
-.post-wrapper {
-    margin-top: 1rem;
-}
 
 .article-header {
     padding-bottom: 30px;
+    margin-bottom: var(--spacing-8);
+    border-bottom: 1px solid var(--c-gray-300);
+}
+
+.post-wrapper{
+    padding-bottom: var(--spacing-8);
+    border-bottom: 1px solid var(--c-gray-300);
 }
 
 @media (max-width: 1024px) {
-    .wrapper {
-        max-width: 600px;
-        position: relative;
-        width: 100%;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
     .post-wrapper {
         display: flex;
         flex-direction: column-reverse;
@@ -118,28 +105,28 @@ useDetailHead(article.value)
     .post-wrapper {
         display: grid;
         grid-template-columns: 600px 300px;
-        -moz-column-gap: 60px;
-        column-gap: 60px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
         grid-template-rows: 1fr;
     }
 }
 
 
 .date {
-    margin-top: 1rem;
+    margin-top: var(--spacing-8);
     font-size: var(--font-size-base);
     color: var(--c-gray-700);
 }
 
 .revised {
-    margin-left: 1rem;
+    margin-left: var(--spacing-2);
 }
 
 .title {
-    margin-top: .5rem;
-    font-size: var(--font-size-2xl);
+    margin-top: var(--spacing-2);
+    font-size: var(--font-size-xl);
     color: var(--c-black);
-    line-height: 1.8;
+    line-height: 1.6;
     font-weight: bold;
 }
 </style>
