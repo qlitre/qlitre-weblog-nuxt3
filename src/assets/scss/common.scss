@@ -146,9 +146,15 @@
     --c-telegram-800: #005885;
     --c-telegram-900: #003F5E;
 
-    --qlitre-fonts-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --qlitre-fonts-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --qlitre-fonts-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --c-text-primary: #474b4b;
+    --c-text-secondary: var(--c-black-alpha-600);
+    --c-text-link: #3182ce;
+    --c-text-link-visited: #805ad5;
+
+
+    --fonts-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --fonts-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --fonts-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
     --font-size-4xl: 3.5rem;
     --font-size-3xl: 2.25rem;
@@ -223,8 +229,8 @@
 
 
 body {
-    color: var(--c-black);
-    font-family: var(--qlitre-fonts-body);
+    color: var(--c-text-primary);
+    font-family: var(--fonts-body);
     background-color: var(--c-white);
     -webkit-text-size-adjust: 100%;
 }
@@ -232,7 +238,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: var(--qlitre-fonts-heading);
+    font-family: var(--fonts-heading);
 }
 
 *,

@@ -23,8 +23,17 @@ onMounted(() =>
         margin-top: 0;
         margin-bottom: 1rem;
         line-height: 1.9;
-        font-weight: 500;
         font-size: var(--font-size-base);
+    }
+
+    :deep(p) {
+        line-height: 1.8;
+        white-space: pre-wrap;
+        font-size: var(--font-size-md);
+
+        +p {
+            margin-top: var(--spacing-2);
+        }
     }
 
     :deep(img) {
@@ -41,12 +50,15 @@ onMounted(() =>
     }
 
     :deep(p) code {
-        background-color: var(--c-gray-300);
-        color: var(--c-gray-700);
-        padding: 0.2em 0.4em;
-        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        padding-left: var(--spacing-1);
+        padding-right: var(--spacing-1);
+        border-radius: var(--radius-sm);
+        margin: 0 var(--spacing-2);
+        background-color: var(--c-gray-100);
+        color: var(--c-gray-800);
+        font-family: var(--fonts-mono);
+        font-size: var(--font-size-sm);
+        display: inline-block;
     }
 
     :deep(pre) {
@@ -79,11 +91,15 @@ onMounted(() =>
         margin-bottom: 10px;
     }
 
+    :deep(h2){
+        border-bottom: 1px solid var(--c-gray-300);
+    }
+
     :deep(h2),
     :deep(h3) {
         font-size: var(--font-size-xl);
-        margin-top: 30px;
-        margin-bottom: 10px;
+        margin-top: var(--spacing-8);
+        margin-bottom: var(--spacing-4);
         font-weight: bold;
     }
 

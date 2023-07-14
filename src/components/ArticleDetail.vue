@@ -85,12 +85,10 @@ useDetailHead(article.value)
 .article-header {
     padding-bottom: 30px;
     margin-bottom: var(--spacing-8);
-    border-bottom: 1px solid var(--c-gray-300);
 }
 
 .post-wrapper{
     padding-bottom: var(--spacing-8);
-    border-bottom: 1px solid var(--c-gray-300);
 }
 
 @media (max-width: 1024px) {
