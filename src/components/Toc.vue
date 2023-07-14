@@ -36,7 +36,7 @@ const { toc } = defineProps<Props>()
 @media (min-width: 1024px) {
     .toc {
         position: sticky;
-        top: 80px;
+        top: 100px;
         margin-left: var(--spacing-8);        
     }
 }
