@@ -2,7 +2,6 @@
 
 import { Tag, TagList } from '../types/blog'
 import { MicroCMSQueries } from 'microcms-js-sdk'
-import { getTagReferencedCount } from '../libs/referenced-count'
 
 type Props = {
     selectedTagId?: string;
@@ -26,12 +25,33 @@ if (selectedTagId) {
 }
 
 const queries: MicroCMSQueries = {
-    limit: 1000,
+    limit: 50,
     fields: 'tag'
 }
 
+
+const countData: Record<string, number> = {}
+
 const { data: posts } = await useFetch('/api/postList', { params: queries })
-const countData = getTagReferencedCount(posts.value)
+for (const post of posts.value.contents) {
+    for (const tag of post.tag) {
+        if (countData[tag.id] == undefined) countData[tag.id] = 0
+        countData[tag.id]++
+    }
+}
+
+const totalCount = posts.value.totalCount
+const cnt = Math.ceil(totalCount / 50)
+for (let i = 1; i < cnt; i++) {
+    queries.offset = i * 50
+    const { data: posts } = await useFetch('/api/postList', { params: queries })
+    for (const post of posts.value.contents) {
+        for (const tag of post.tag) {
+            if (countData[tag.id] == undefined) countData[tag.id] = 0
+            countData[tag.id]++
+        }
+    }
+}
 
 function getClass(tagId: string) {
     if (tagId == selectedTagId) return 'active'

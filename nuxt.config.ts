@@ -32,19 +32,28 @@ export default defineNuxtConfig({
                 }
             )
             const totalCount = data.totalCount
-            const allPosts = await client.getList(
-                {
-                    endpoint: 'post',
-                    queries: {
-                        limit: totalCount,
-                        fields: 'id,tag'
-                    }
+            const perRequestCount = 50
+            const reqCount = Math.ceil(totalCount / perRequestCount)
+            const allPostData = []
+            for (let i = 0; i < reqCount; i++) {
+                const offset = i * perRequestCount
+                const data = await client.getList(
+                    {
+                        endpoint: 'post',
+                        queries: {
+                            limit: perRequestCount,
+                            offset: offset,
+                            fields: 'id,tag'
+                        }
+                    })
+                for (const elm of data.contents) {
+                    allPostData.push(elm)
                 }
-            )
+            }
             // タグに紐づいている記事の数
             const tagCount: Record<string, number> = {}
             // 記事を繰り返す
-            for (const elm of allPosts.contents) {
+            for (const elm of allPostData) {
                 const slug = elm.id
                 const tags = elm.tag
                 // 記事の数をカウントアップ
