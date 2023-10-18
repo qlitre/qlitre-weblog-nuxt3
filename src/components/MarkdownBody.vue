@@ -78,7 +78,8 @@ onMounted(() =>
     }
 
     :deep(blockquote) {
-        padding: 15px;
+        padding-left: 15px;
+        margin: var(--spacing-4) 0;
         border-left: 2px solid var(--c-gray-300);
         border-radius: 2px;
         color: var(--c-gray-500);
@@ -91,7 +92,7 @@ onMounted(() =>
         margin-bottom: 10px;
     }
 
-    :deep(h2){
+    :deep(h2) {
         border-bottom: 1px solid var(--c-gray-300);
     }
 

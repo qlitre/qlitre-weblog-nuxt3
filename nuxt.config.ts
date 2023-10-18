@@ -16,7 +16,9 @@ export default defineNuxtConfig({
             if (nitroConfig.dev) {
                 return;
             }
+            nitroConfig.prerender.ignore = ['/draft', '/search']
             nitroConfig.prerender.crawlLinks = false
+
             const limit = 10
             const client = createClient({
                 serviceDomain: SERVICE_DOMAIN,

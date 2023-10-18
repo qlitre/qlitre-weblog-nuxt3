@@ -4,11 +4,6 @@ import { BLOG_PER_PAGE } from '../settings/siteSettings'
 import { MicroCMSQueries } from 'microcms-js-sdk'
 import { config } from '../settings/siteSettings'
 
-const layout = 'container';
-definePageMeta({
-    layout: false,
-});
-
 type Props = {
     page: number,
     tagId?: string
@@ -37,7 +32,7 @@ useIndexHead()
 </script>
             
 <template>
-    <NuxtLayout :name="layout">
+    <div class="container">
         <div class="mb-2">
             <TagInline :selectedTagId="tagId" />
         </div>
@@ -50,7 +45,7 @@ useIndexHead()
             </div>
         </div>
         <Pagination :numPages="numPages" :current="page" :tagId="tagId" />
-    </NuxtLayout>
+    </div>
 </template>
         
 <style scoped lang="scss">
@@ -67,6 +62,12 @@ useIndexHead()
         column-gap: 60px;
         grid-template-rows: 1fr;
     }
+}
+
+.container {
+    margin-top: var(--spacing-16);
+    margin-bottom: var(--spacing-16);
+    @include appContainer;
 }
 </style>
             
