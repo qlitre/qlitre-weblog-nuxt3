@@ -85,7 +85,8 @@ export default defineNuxtConfig({
         },
     },
     app: {
-        pageTransition: { name: 'page', mode: 'default' }
+        pageTransition: { name: 'page', mode: 'default' },
+        layoutTransition: { name: 'layout', mode: 'default' },
     },
     modules: [
         ['@nuxtjs/google-adsense', { id: GA_ADSENSE_ID },],

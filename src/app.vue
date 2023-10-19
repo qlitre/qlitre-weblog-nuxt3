@@ -1,7 +1,7 @@
 <template>
-  <TheHeader />
-  <NuxtPage />
-  <TheFooter />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <style>
@@ -12,6 +12,17 @@
 
 .page-enter-from,
 .page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.4s;
+}
+
+.layout-enter-from,
+.layout-leave-to {
   opacity: 0;
   filter: blur(1rem);
 }

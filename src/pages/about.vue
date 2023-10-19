@@ -73,7 +73,6 @@ const skillSet = [
     position: relative;
     width: 720px;
     margin: 0 auto 0;
-    padding-top: 112px;
     padding-bottom: 50px;
 }
 

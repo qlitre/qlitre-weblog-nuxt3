@@ -10,7 +10,6 @@ type Props = {
 }
 
 const { page, tagId } = defineProps<Props>()
-
 const limit = BLOG_PER_PAGE
 const queries: MicroCMSQueries = {
     limit: limit,
@@ -32,7 +31,7 @@ useIndexHead()
 </script>
             
 <template>
-    <div class="container">
+    <div>
         <div class="mb-2">
             <TagInline :selectedTagId="tagId" />
         </div>
@@ -62,12 +61,6 @@ useIndexHead()
         column-gap: 60px;
         grid-template-rows: 1fr;
     }
-}
-
-.container {
-    margin-top: var(--spacing-16);
-    margin-bottom: var(--spacing-16);
-    @include appContainer;
 }
 </style>
             

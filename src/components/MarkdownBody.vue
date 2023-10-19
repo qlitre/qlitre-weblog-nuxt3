@@ -120,7 +120,8 @@ onMounted(() =>
         line-height: 1.7;
 
         li {
-            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
         }
     }
 

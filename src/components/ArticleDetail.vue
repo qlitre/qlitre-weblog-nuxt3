@@ -42,7 +42,7 @@ useDetailHead(article.value)
 </script>
         
 <template>
-    <div class="container">
+    <div>
         <div class="article-header">
             <TagLabel v-for="tag in article.tag" :key="tag.id" :tag="tag" :colorClass="`nonActive`"></TagLabel>
             <h1 class="title">
@@ -76,12 +76,6 @@ useDetailHead(article.value)
 </template>
     
 <style scoped lang="scss">
-.container {
-    margin-top: var(--spacing-16);
-    margin-bottom: var(--spacing-16);
-    @include appContainer;
-}
-
 .article-header {
     padding-bottom: 30px;
     margin-bottom: var(--spacing-8);
