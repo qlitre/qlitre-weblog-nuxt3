@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { Body } from '../types/blog'
+import type { Body } from '../types/blog'
 type Props = {
     repeatedBody: Body[]
 }

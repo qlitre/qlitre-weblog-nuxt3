@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { AmazonLink } from '../types/blog'
+import type { AmazonLink } from '../types/blog'
 
 type Props = {
     amazonLink: AmazonLink

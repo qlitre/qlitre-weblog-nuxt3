@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { BLOG_PER_PAGE } from '../settings/siteSettings'
-import { MicroCMSQueries } from 'microcms-js-sdk'
+import type { MicroCMSQueries } from 'microcms-js-sdk'
 import { config } from '../settings/siteSettings'
 
 type Props = {

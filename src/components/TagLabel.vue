@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { Tag } from '../types/blog'
+import type { Tag } from '../types/blog'
 
 type Props = {
     tag: Tag;

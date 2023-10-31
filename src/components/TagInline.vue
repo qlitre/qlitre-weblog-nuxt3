@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
-import { Tag, TagList } from '../types/blog'
-import { MicroCMSQueries } from 'microcms-js-sdk'
+import type { Tag, TagList } from '../types/blog'
+import type { MicroCMSQueries } from 'microcms-js-sdk'
 
 type Props = {
     selectedTagId?: string;
