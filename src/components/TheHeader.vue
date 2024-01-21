@@ -19,7 +19,7 @@ import { config } from '../settings/siteSettings'
                     </a>
                 </li>
                 <li class="nav-item">
-                    <nuxt-link :to='`/about`'>
+                    <nuxt-link to='https://qlitre.me/' target="_blank" rel="noopener noreferrer">
                         ABOUT
                     </nuxt-link>
                 </li>
