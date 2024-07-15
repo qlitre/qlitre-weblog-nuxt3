@@ -82,6 +82,7 @@ export default defineNuxtConfig({
                     nitroConfig.prerender.routes.push(`/tags/${tagId}/page/${p}`)
                 }
             }
+            nitroConfig.prerender.routes.push('/')
         },
     },
     app: {
