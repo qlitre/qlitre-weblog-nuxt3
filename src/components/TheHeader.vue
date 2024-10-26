@@ -41,7 +41,11 @@ import { config } from '../settings/siteSettings'
     justify-content: space-between;
     padding-top: var(--spacing-4);
     padding-bottom: var(--spacing-4);
-    @include appContainer;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
 }
 
 

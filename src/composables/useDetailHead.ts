@@ -1,4 +1,4 @@
-import { Post } from "../types/blog"
+import type { Post } from "../types/blog"
 import { config } from "../settings/siteSettings"
 
 export const useDetailHead = (post: Post) => {
